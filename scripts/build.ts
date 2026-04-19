@@ -8,14 +8,16 @@
  * No framework, no bundler, no router. Runs with `tsx scripts/build.ts`.
  */
 
-import { spawn } from 'node:child_process'
+import { execFileSync, spawn } from 'node:child_process'
 import { cp, mkdir, readdir, rm, stat, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { locales } from '../src/content/locales.ts'
 import { renderHome } from '../src/templates/home.ts'
+import { renderNotFound } from '../src/templates/notFound.ts'
 import { renderPage } from '../src/templates/page.ts'
+import { renderSitemap } from '../src/templates/sitemap.ts'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DIST = resolve(ROOT, 'dist')
@@ -61,6 +63,26 @@ function runTailwind(): Promise<void> {
   })
 }
 
+// Return a stable YYYY-MM-DD date for sitemap <lastmod>.
+// Preference order: BUILD_DATE env → latest git commit date → today.
+function resolveLastmod(): string {
+  const override = process.env.BUILD_DATE
+  if (override && /^\d{4}-\d{2}-\d{2}$/.test(override)) return override
+
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%cs'], {
+      cwd: ROOT,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
+    if (/^\d{4}-\d{2}-\d{2}$/.test(out)) return out
+  } catch {
+    // git unavailable or no commits; fall through to today's date
+  }
+
+  return new Date().toISOString().slice(0, 10)
+}
+
 async function copyPublic(): Promise<void> {
   if (!(await exists(PUBLIC_DIR))) return
   const entries = await readdir(PUBLIC_DIR)
@@ -81,11 +103,13 @@ async function main(): Promise<void> {
   for (const locale of locales) {
     await writeOut(`${locale.code}/index.html`, renderPage(locale))
   }
+  await writeOut('404.html', renderNotFound())
+  await writeOut('sitemap.xml', renderSitemap(resolveLastmod()))
 
   await runTailwind()
 
-  const pages = locales.length + 1
-  console.log(`built ${pages} page${pages === 1 ? '' : 's'} → dist/`)
+  const pages = locales.length + 2 // + home + 404
+  console.log(`built ${pages} pages + sitemap.xml → dist/`)
 }
 
 main().catch((err: unknown) => {

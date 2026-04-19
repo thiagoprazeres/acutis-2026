@@ -13,6 +13,9 @@ interface DocumentShellInput {
   readonly body: string
   // Other locales used to emit hreflang alternates. Home uses all locales; pages use all too.
   readonly alternates: readonly LocaleContent[]
+  // When true, emit a minimal head: noindex, no canonical, no hreflang, no OG.
+  // Used for the 404 page, which is a fallback, not an editorial artifact.
+  readonly noIndex?: boolean
 }
 
 function absolute(pathSuffix: string): string {
@@ -28,6 +31,7 @@ function baseRelative(pathSuffix: string): string {
 export function documentShell(input: DocumentShellInput): string {
   const canonical = absolute(input.pathSuffix)
   const cssHref = baseRelative('assets/app.css')
+  const sitemapHref = baseRelative('sitemap.xml')
 
   const hreflangLinks = input.alternates
     .map(
@@ -37,6 +41,18 @@ export function documentShell(input: DocumentShellInput): string {
     .join('\n    ')
 
   const xDefault = `<link rel="alternate" hreflang="x-default" href="${escapeAttr(absolute(''))}" />`
+
+  const seoHead = input.noIndex
+    ? `<meta name="robots" content="noindex, follow" />`
+    : `<link rel="canonical" href="${escapeAttr(canonical)}" />
+    ${hreflangLinks}
+    ${xDefault}
+    <meta property="og:site_name" content="${escapeAttr(site.name)}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="${escapeAttr(input.title)}" />
+    <meta property="og:description" content="${escapeAttr(input.description)}" />
+    <meta property="og:url" content="${escapeAttr(canonical)}" />
+    <meta name="twitter:card" content="summary" />`
 
   return `<!doctype html>
 <html lang="${escapeAttr(input.htmlLang)}" dir="${input.dir}">
@@ -48,15 +64,8 @@ export function documentShell(input: DocumentShellInput): string {
     <meta name="author" content="${escapeAttr(site.author)}" />
     <meta name="color-scheme" content="light dark" />
     <meta name="generator" content="acutis-2026 · v${site.year} · static" />
-    <link rel="canonical" href="${escapeAttr(canonical)}" />
-    ${hreflangLinks}
-    ${xDefault}
-    <meta property="og:site_name" content="${escapeAttr(site.name)}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="${escapeAttr(input.title)}" />
-    <meta property="og:description" content="${escapeAttr(input.description)}" />
-    <meta property="og:url" content="${escapeAttr(canonical)}" />
-    <meta name="twitter:card" content="summary" />
+    ${seoHead}
+    <link rel="sitemap" type="application/xml" href="${escapeAttr(sitemapHref)}" />
     <link rel="stylesheet" href="${escapeAttr(cssHref)}" />
   </head>
   <body class="min-h-screen bg-paper text-ink antialiased selection:bg-ink selection:text-paper">

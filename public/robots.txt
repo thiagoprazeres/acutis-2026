@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thiagoprazeres.github.io/acutis-2026/sitemap.xml
