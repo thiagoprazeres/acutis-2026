@@ -15,6 +15,19 @@ export interface EditorialSection {
   readonly paragraphs: readonly string[]
 }
 
+export interface StoryChapter {
+  readonly eyebrow: string
+  readonly title: string
+  readonly paragraphs: readonly string[]
+}
+
+export interface StorySection {
+  readonly eyebrow: string
+  readonly title: string
+  readonly intro: readonly string[]
+  readonly chapters: readonly StoryChapter[]
+}
+
 // Secondary literature is organised in thematic groups so the bibliography
 // reads as a research layer rather than a flat list. Primary documentary
 // anchors live in `externalRecord`; scholarly literature lives here.
@@ -34,11 +47,13 @@ export interface ReferencesSection {
 // External references are plain hyperlinks, never embedded, never rehosted.
 // See MEDIA.md at the repo root for the full policy.
 export type ExternalReferenceKind =
+  | 'asset'
   | 'archive'
   | 'document'
   | 'press'
   | 'scholarship'
   | 'site'
+  | 'theory'
 
 export interface ExternalReference {
   readonly kind: ExternalReferenceKind
@@ -79,10 +94,12 @@ export interface LocaleContent {
     readonly byline: string
   }
   readonly sections: {
+    readonly story: StorySection
     readonly problem: EditorialSection
     readonly hypothesis: EditorialSection
     readonly stateOfTheArt: EditorialSection
     readonly externalRecord: ExternalRecordSection
+    readonly remoteAssets: ExternalRecordSection
     readonly references: ReferencesSection
   }
   readonly nav: {
@@ -93,10 +110,12 @@ export interface LocaleContent {
     // Screen-reader only hint appended to outbound links that open in a new tab.
     readonly opensInNewTab: string
     readonly sectionLabels: {
+      readonly story: string
       readonly problem: string
       readonly hypothesis: string
       readonly stateOfTheArt: string
       readonly externalRecord: string
+      readonly remoteAssets: string
       readonly references: string
     }
   }

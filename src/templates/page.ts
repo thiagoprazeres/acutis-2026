@@ -9,6 +9,7 @@ import type {
   ExternalRecordSection,
   Reference,
   ReferencesSection,
+  StorySection,
 } from '../content/types.ts'
 
 function renderLanguageSwitcher(current: LocaleContent): string {
@@ -31,10 +32,12 @@ function renderLanguageSwitcher(current: LocaleContent): string {
 
 function renderTableOfContents(locale: LocaleContent): string {
   const items: Array<{ id: string; label: string }> = [
+    { id: 'story', label: locale.nav.sectionLabels.story },
     { id: 'problem', label: locale.nav.sectionLabels.problem },
     { id: 'hypothesis', label: locale.nav.sectionLabels.hypothesis },
     { id: 'state-of-the-art', label: locale.nav.sectionLabels.stateOfTheArt },
     { id: 'external-record', label: locale.nav.sectionLabels.externalRecord },
+    { id: 'remote-assets', label: locale.nav.sectionLabels.remoteAssets },
     { id: 'references', label: locale.nav.sectionLabels.references },
   ]
 
@@ -52,6 +55,48 @@ function renderTableOfContents(locale: LocaleContent): string {
             ${list}
         </ol>
       </nav>`
+}
+
+function renderStory(section: StorySection): string {
+  const intro = section.intro
+    .map((p) => `          <p>${escapeHtml(p)}</p>`)
+    .join('\n')
+  const chapters = section.chapters
+    .map((chapter, index) => {
+      const paragraphs = chapter.paragraphs
+        .map((p) => `              <p>${escapeHtml(p)}</p>`)
+        .join('\n')
+      const number = String(index + 1).padStart(2, '0')
+
+      return `
+          <article class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-8 border-t border-rule">
+            <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-2 tabular-nums" aria-hidden="true">${number}</span>
+            <div>
+              <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(chapter.eyebrow)}</p>
+              <h3 class="mt-3 font-serif text-2xl md:text-3xl leading-tight tracking-[-0.01em]">${escapeHtml(chapter.title)}</h3>
+              <div class="mt-5 space-y-5 font-serif text-lg md:text-xl leading-[1.7] max-w-prose">
+${paragraphs}
+              </div>
+            </div>
+          </article>`
+    })
+    .join('\n')
+
+  return `
+      <section id="story" class="scroll-mt-16 grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 py-16 md:py-24 border-b border-rule">
+        <header class="md:col-span-4">
+          <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(section.eyebrow)}</p>
+          <h2 class="mt-4 font-serif text-3xl md:text-4xl leading-tight tracking-[-0.01em] max-w-md">${escapeHtml(section.title)}</h2>
+        </header>
+        <div class="md:col-span-8">
+          <div class="space-y-5 font-serif text-lg md:text-xl leading-[1.7] max-w-prose">
+${intro}
+          </div>
+          <div class="mt-10 border-b border-rule">
+${chapters}
+          </div>
+        </div>
+      </section>`
 }
 
 function renderSection(id: string, section: EditorialSection): string {
@@ -116,6 +161,7 @@ function renderExternalEntry(
 }
 
 function renderExternalRecord(
+  id: string,
   section: ExternalRecordSection,
   opensInNewTab: string,
 ): string {
@@ -132,7 +178,7 @@ function renderExternalRecord(
     .join('\n')
 
   return `
-      <section id="external-record" class="scroll-mt-16 grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 py-16 md:py-24 border-b border-rule">
+      <section id="${escapeAttr(id)}" class="scroll-mt-16 grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 py-16 md:py-24 border-b border-rule">
         <header class="md:col-span-4">
           <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(section.eyebrow)}</p>
           <h2 class="mt-4 font-serif text-3xl md:text-4xl leading-tight tracking-[-0.01em] max-w-md">${escapeHtml(section.title)}</h2>
@@ -249,10 +295,12 @@ ${switcher}
       <div class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 pt-8 md:pt-14">
 ${toc}
         <div class="md:col-span-8">
+${renderStory(locale.sections.story)}
 ${renderSection('problem', locale.sections.problem)}
 ${renderSection('hypothesis', locale.sections.hypothesis)}
 ${renderSection('state-of-the-art', locale.sections.stateOfTheArt)}
-${renderExternalRecord(locale.sections.externalRecord, locale.nav.opensInNewTab)}
+${renderExternalRecord('external-record', locale.sections.externalRecord, locale.nav.opensInNewTab)}
+${renderExternalRecord('remote-assets', locale.sections.remoteAssets, locale.nav.opensInNewTab)}
 ${renderReferences(locale.sections.references)}
         </div>
       </div>

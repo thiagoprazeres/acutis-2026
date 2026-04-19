@@ -19,6 +19,27 @@ interface ExternalAnchor {
 const ACCESSED = '2026-04-19'
 
 export const externalAnchors = {
+  biography: {
+    kind: 'site',
+    institution: 'Associazione Amici di Carlo Acutis',
+    title: 'Who is Carlo Acutis?',
+    url: 'https://www.carloacutis.com/en/association/chiecarloacutis',
+    accessed: ACCESSED,
+  },
+  timeline: {
+    kind: 'site',
+    institution: 'Associazione Amici di Carlo Acutis',
+    title: "Carlo's timeline",
+    url: 'https://www.carloacutis.com/en/association/la-linea-del-tempo-di-carlo',
+    accessed: ACCESSED,
+  },
+  exhibitionAssociation: {
+    kind: 'site',
+    institution: 'Associazione Amici di Carlo Acutis',
+    title: 'Eucharistic Miracles Exhibition',
+    url: 'https://www.carloacutis.com/en/association/mostra-miracoli-eucaristici',
+    accessed: ACCESSED,
+  },
   exhibition: {
     kind: 'archive',
     institution: 'Associazione Amici di Carlo Acutis',
@@ -43,12 +64,48 @@ export const externalAnchors = {
     date: '2025-06',
     accessed: ACCESSED,
   },
+  vaticanApp: {
+    kind: 'press',
+    institution: 'Vatican News',
+    title: 'New mobile app dedicated to Eucharistic miracles and St. Carlo Acutis',
+    url: 'https://www.vaticannews.va/en/church/news/2026-02/st-carlo-acutis-eucharistic-miracles-new-mobile-app.html',
+    date: '2026-02-18',
+    accessed: ACCESSED,
+  },
   digiovine: {
     kind: 'scholarship',
     institution: 'West Chester University',
     title: 'Carlo Acutis: Modern Sainthood and (Virtual) Pilgrimage',
     url: 'https://www.wcupa.edu/sciences-mathematics/anthropologySociology/museum/m-digiovine/research-carlo-acutis.aspx',
     date: '2023',
+    accessed: ACCESSED,
+  },
+  commons: {
+    kind: 'asset',
+    institution: 'Wikimedia Commons',
+    title: 'Category: Carlo Acutis',
+    url: 'https://commons.wikimedia.org/wiki/Category:Carlo_Acutis',
+    accessed: ACCESSED,
+  },
+  hohpeMessageBus: {
+    kind: 'theory',
+    institution: 'Enterprise Integration Patterns',
+    title: 'Message Bus',
+    url: 'https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageBus.html',
+    accessed: ACCESSED,
+  },
+  hohpeMessageTranslator: {
+    kind: 'theory',
+    institution: 'Enterprise Integration Patterns',
+    title: 'Message Translator',
+    url: 'https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html',
+    accessed: ACCESSED,
+  },
+  peirceSigns: {
+    kind: 'theory',
+    institution: 'Stanford Encyclopedia of Philosophy',
+    title: "Peirce's Theory of Signs",
+    url: 'https://plato.stanford.edu/archives/spr2024/entries/peirce-semiotics/',
     accessed: ACCESSED,
   },
 } as const satisfies Record<string, ExternalAnchor>

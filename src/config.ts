@@ -17,7 +17,7 @@ export const site = {
   // (header mark on the index, footer mark on 404). Copy that is visible
   // inside editorial paragraphs is kept in the locale content files.
   release: {
-    version: 'v1.0.0',
-    label: 'Public product',
+    version: 'v2.0.0',
+    label: 'Narrative edition',
   },
 } as const

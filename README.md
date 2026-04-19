@@ -2,7 +2,7 @@
 
 A sober multilingual editorial piece about Carlo Acutis — programmer, web designer, digital mediator of the sacred — read in a 2026 key.
 
-This is not a startup landing page. It is not a devotional scrapbook. It is not a marketing microsite. It reads Acutis's online work as a small communication architecture, and publishes that reading as a primary editorial object in five languages.
+This is not a startup landing page. It is not a devotional scrapbook. It is not a marketing microsite. It reads Acutis's online work as a small communication architecture, and publishes that reading as a primary editorial object in five languages. The v2 edition adds an original storytelling layer from Carlo's beginning to the 2026 continuation of the Eucharistic-miracles project.
 
 ## Stack
 
@@ -27,7 +27,7 @@ src/
   templates/
     layout.ts            # document shell, meta, hreflang
     home.ts              # root editorial language selector
-    page.ts              # locale page (problem, hypothesis, state of the art, references)
+    page.ts              # locale page (story, argument, external records, references)
   styles/
     app.css              # Tailwind v4 entry + design tokens
   utils/
@@ -56,9 +56,9 @@ BASE_PATH=/ CANONICAL_ORIGIN=https://example.org npm run build
 
 ## Releases
 
-The site is released in numbered editorial stages. Current release: **v1.0.0 — Public product**. This is the first stable public version of the piece: the editorial architecture, multilingual static structure, external-reference policy, accessibility pass, and GitHub Pages delivery path are considered release-ready.
+The site is released in numbered editorial stages. Current release: **v2.0.0 — Narrative edition**. This release keeps the stable public product intact and adds "The Architect of the Invisible", a storytelling path through Carlo Acutis, Eucharistic-miracle cataloging, systems integration, Peircean semiosis and Carlo as a meeting point between archive, interface and sacrament.
 
-Post-1.0 work is intentionally outside this release. Later changes may extend the research surface, add new editorial registers, or revisit presentation details, but those are backlog items, not blockers for the stable public product.
+The v2 boundary is editorial, not infrastructural. It adds narrative and a stricter remote-asset register without changing the stack, adding dependencies, rehosting third-party media, or turning the project into a dynamic application.
 
 ## Media policy
 

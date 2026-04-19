@@ -20,6 +20,51 @@ export const pt: LocaleContent = {
     byline: 'Leitura de Thiago Prazeres. Disponível em cinco idiomas.',
   },
   sections: {
+    story: {
+      eyebrow: 'Narrativa · v2',
+      title: 'O Arquiteto do Invisível: a jornada de Carlo Acutis',
+      intro: [
+        'Carlo Acutis entra nesta história não como um prodígio chamado a resolver um problema tecnológico da Igreja, mas como um adolescente que percebeu que uma memória devocional dispersa podia se tornar legível se alguém lhe desse estrutura.',
+        'De Londres em 1991 a Milão, da missa diária à web inicial, a pergunta se torna prática: como um milagre guardado em um arquivo paroquial, em um testemunho local ou em um relatório científico pode viajar sem perder seu sinal?',
+      ],
+      chapters: [
+        {
+          eyebrow: '1991–2006',
+          title: 'Antes do catálogo',
+          paragraphs: [
+            'Carlo nasceu em Londres em 3 de maio de 1991 e voltou a Milão com os pais poucos meses depois. O registro público insiste na textura comum de sua vida: escola, futebol, videogames, programas de computador, serviço paroquial, familiaridade com as ferramentas de sua geração.',
+            'O mesmo registro mostra também um centro de gravidade incomum. Desde a Primeira Comunhão, a Eucaristia passou a organizar seu dia. O site e a exposição não surgiram como passatempo separado; cresceram de uma vida jovem já organizada pela pergunta da presença.',
+          ],
+        },
+        {
+          eyebrow: 'Integração de sistemas',
+          title: 'O broker da fé',
+          paragraphs: [
+            'No começo dos anos 2000, as histórias que Carlo queria fazer circular não estavam ausentes. Estavam distribuídas em sistemas diferentes: arquivos paroquiais, memória local, imagens digitalizadas, aprovações eclesiais, relatórios científicos, línguas e geografias. Em termos de software, comportavam-se como silos de dados.',
+            'Lida com as Enterprise Integration Patterns de Gregor Hohpe ao fundo, a obra de Carlo se torna um Message Bus metafórico. O site e a exposição imprimível deram aos registros separados uma interface comum. Não apagaram as histórias locais; permitiram que elas viajassem por um canal compartilhado.',
+            'O movimento mais profundo foi a tradução. Um milagre medieval ou moderno não pode simplesmente ser copiado para a web sem mudança de protocolo. Carlo agiu como um Message Translator: datas, lugares, fotografias, mapas, legendas e resumos converteram devoção analógica em itinerário digital sem fingir que o bit esgotava o mistério.',
+          ],
+        },
+        {
+          eyebrow: 'Semiose',
+          title: 'O decifrador do sinal',
+          paragraphs: [
+            'Para Carlo, a Eucaristia não era um emblema vago. Era um sinal carregado de presença. Peirce ajuda a nomear a estrutura: uma forma significante, um objeto para o qual o sinal aponta e um interpretante produzido na pessoa que aprende a ler essa relação.',
+            'O catálogo intensificou esse processo. Uma fotografia, um mapa ou um relatório médico não substitui a fé; dá mais matéria ao interpretante. O milagre se torna não só objeto de devoção, mas também objeto de informação, capaz de ser seguido, comparado e revisitado.',
+            'Nesse sentido, o clique não era trivial. Abrir um registro sobre Lanciano ou Buenos Aires iniciava uma cadeia de interpretação: lugar, matéria, testemunho, instituição, leitor. A tecnologia se tornava ponte para a semiose, não substituto do sagrado.',
+          ],
+        },
+        {
+          eyebrow: 'Síntese',
+          title: 'Carlo como ponto de encontro',
+          paragraphs: [
+            'A síntese não é que Carlo tenha sido programador ou devoto. É que os dois registros se encontraram em um único ato editorial. Ele tratou a base de dados com a seriedade de um relicário e tratou o relicário com a lógica distributiva de uma rede.',
+            'Em 2026, depois da canonização e depois de uma nova continuação móvel do projeto dos milagres eucarísticos, a forma desse gesto está mais clara. Carlo tornou-se um nó entre arquivo e peregrinação, tela e altar, fluência técnica juvenil e uma gramática sacramental mais antiga.',
+            'A expressão “API para a eternidade” é deliberadamente metafórica, mas aponta para a realização real: Carlo não inventou os mistérios que catalogou. Ele criou uma interface pela qual outra geração poderia encontrá-los sem que o passado fosse achatado em conteúdo.',
+          ],
+        },
+      ],
+    },
     problem: {
       eyebrow: 'Problema',
       title: 'Ler Acutis como arquiteto, não como ícone',
@@ -56,11 +101,13 @@ export const pt: LocaleContent = {
       policyLabel: 'Ver a política de mídia externa',
       policyUrl: POLICY_URL,
       kindLabels: {
+        asset: 'Ativo',
         archive: 'Arquivo',
         document: 'Documento',
         press: 'Imprensa',
         scholarship: 'Pesquisa',
         site: 'Site',
+        theory: 'Teoria',
       },
       items: [
         {
@@ -78,6 +125,58 @@ export const pt: LocaleContent = {
         {
           ...externalAnchors.digiovine,
           note: 'Uma leitura antropológica do culto e da peregrinação virtual, em torno da qual converge grande parte da bibliografia atual sobre Acutis.',
+        },
+      ],
+    },
+    remoteAssets: {
+      eyebrow: 'Ativos remotos',
+      title: 'Links externos para a camada narrativa',
+      intro:
+        'A camada narrativa v2 acrescenta um conjunto mais estrito de coordenadas externas: biografia e linha do tempo oficiais, página da exposição, rastro do app de 2026, catálogo de mídia e links teóricos usados na leitura Hohpe e Peirce. Eles permanecem externos por desenho.',
+      accessedLabel: 'acessado em',
+      policyLabel: 'Ver a política de mídia externa',
+      policyUrl: POLICY_URL,
+      kindLabels: {
+        asset: 'Ativo',
+        archive: 'Arquivo',
+        document: 'Documento',
+        press: 'Imprensa',
+        scholarship: 'Pesquisa',
+        site: 'Site',
+        theory: 'Teoria',
+      },
+      items: [
+        {
+          ...externalAnchors.biography,
+          note: 'Página biográfica oficial usada para ancorar a narrativa na vida comum de Carlo, no serviço paroquial e na prática de computador.',
+        },
+        {
+          ...externalAnchors.timeline,
+          note: 'Âncora cronológica oficial para o arco 1991–2025, incluindo nascimento, Primeira Comunhão, doença, beatificação e canonização.',
+        },
+        {
+          ...externalAnchors.exhibitionAssociation,
+          note: 'Página da associação que descreve a exposição dos Milagres Eucarísticos como criada e projetada por Carlo Acutis e distribuída internacionalmente.',
+        },
+        {
+          ...externalAnchors.vaticanApp,
+          note: 'Rastro da Vatican News sobre a continuação móvel, em 2026, do projeto dos milagres eucarísticos, útil para o ponto de chegada “até 2026”.',
+        },
+        {
+          ...externalAnchors.commons,
+          note: 'Catálogo externo de mídia para leitores que precisam de contexto visual. Nenhum arquivo é baixado ou re-hospedado por este projeto.',
+        },
+        {
+          ...externalAnchors.hohpeMessageBus,
+          note: 'Coordenada conceitual para ler a exposição como canal compartilhado pelo qual registros distribuídos podem circular.',
+        },
+        {
+          ...externalAnchors.hohpeMessageTranslator,
+          note: 'Coordenada conceitual para ler a obra web de Carlo como tradução entre protocolos arquivísticos, devocionais e digitais.',
+        },
+        {
+          ...externalAnchors.peirceSigns,
+          note: 'Coordenada conceitual para a leitura triádica do signo usada no capítulo sobre semiose.',
         },
       ],
     },
@@ -239,15 +338,17 @@ export const pt: LocaleContent = {
     onThisPage: 'Nesta página',
     opensInNewTab: '(abre em nova aba)',
     sectionLabels: {
+      story: 'Narrativa',
       problem: 'Problema',
       hypothesis: 'Hipótese',
       stateOfTheArt: 'Estado da arte',
       externalRecord: 'Registro externo',
+      remoteAssets: 'Ativos remotos',
       references: 'Referências',
     },
   },
   colophon: {
-    note: 'Esta página pertence ao release v1.0.0 — Produto público. A arquitetura editorial está estável, a estrutura multilíngue é intencional e o trabalho posterior pertence ao pós-1.0.',
+    note: 'Esta página pertence ao release v2.0.0 — Edição narrativa. O produto público estável agora inclui uma camada de storytelling e um registro mais estrito de ativos remotos.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }
