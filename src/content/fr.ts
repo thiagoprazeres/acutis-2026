@@ -1,4 +1,5 @@
 import type { LocaleContent } from './types.ts'
+import { externalAnchors, POLICY_URL } from './externalAnchors.ts'
 
 export const fr: LocaleContent = {
   code: 'fr',
@@ -43,6 +44,40 @@ export const fr: LocaleContent = {
         'La littérature sur Acutis se tourne vers deux directions. D’un côté, les études de religion numérique — Heidi Campbell sur la distinction entre religion online et online religion, Christopher Helland sur le pèlerinage virtuel, Michael DiGiovine sur le culte — le lisent comme un cas de religion s’adaptant aux nouveaux médias.',
         'De l’autre, l’écriture ecclésiale et dévotionnelle l’absorbe dans des catégories déjà données de sainteté. Le pape François, dans Christus Vivit, le nomme comme modèle d’une foi à l’aise avec les écrans ; la canonisation de 2025 scelle institutionnellement cette lecture.',
         'Entre ces deux rayonnages, un troisième registre reste peu habité. L’architecture de l’information (les patterns d’intégration de Gregor Hohpe ; l’écriture classique de Jakob Nielsen sur les sites comme systèmes), la critique du capitalisme de plateforme (Shoshana Zuboff) et des lectures plus anciennes de la religion comme travail culturel (Gramsci, Löwy) se rencontrent rarement autour d’Acutis. C’est le cadre que cette pièce emprunte — non pour élargir la bibliographie, mais pour rendre l’architecture visible.',
+      ],
+    },
+    externalRecord: {
+      eyebrow: 'Archives externes',
+      title: 'Sources primaires et traces institutionnelles',
+      intro:
+        'Ce ne sont pas des téléchargements. Ce sont des références externes — de simples liens vers les sources que cette pièce lit. Si un hôte institutionnel bouge, le texte demeure ; le lien est la trace, non l’artefact.',
+      accessedLabel: 'consulté le',
+      policyLabel: 'Voir la politique des médias externes',
+      policyUrl: POLICY_URL,
+      kindLabels: {
+        archive: 'Archives',
+        document: 'Document',
+        press: 'Presse',
+        scholarship: 'Recherche',
+        site: 'Site',
+      },
+      items: [
+        {
+          ...externalAnchors.exhibition,
+          note: 'L’artefact primaire. La pièce lit cette exposition comme une architecture de communication, non comme un contenu dévotionnel.',
+        },
+        {
+          ...externalAnchors.christusVivit,
+          note: 'L’exhortation apostolique qui nomme Acutis comme modèle d’une foi à l’aise avec les écrans. La première couche documentée de légitimation institutionnelle.',
+        },
+        {
+          ...externalAnchors.canonization,
+          note: 'L’annonce qui ferme l’arc de la légitimation. La canonisation a eu lieu le 7 septembre 2025.',
+        },
+        {
+          ...externalAnchors.digiovine,
+          note: 'Une lecture anthropologique du culte et du pèlerinage virtuel, autour de laquelle converge la majeure partie de la bibliographie actuelle sur Acutis.',
+        },
       ],
     },
     references: {
@@ -111,11 +146,12 @@ export const fr: LocaleContent = {
       problem: 'Problème',
       hypothesis: 'Hypothèse',
       stateOfTheArt: 'État de l’art',
+      externalRecord: 'Archives externes',
       references: 'Références',
     },
   },
   colophon: {
-    note: 'Cette page appartient à la version v0.4.0 — Architecture éditoriale. Les versions ultérieures élargiront la surface de recherche sans toucher à l’architecture.',
+    note: 'Cette page appartient à la version v0.6.0 — Enrichissement des médias externes. L’architecture éditoriale de la v0.4.0 tient ; les références externes entrent désormais dans le texte comme de simples liens, non comme des ressources locales.',
     license: 'Texte : CC BY 4.0 · Code : MIT.',
   },
 }

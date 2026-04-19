@@ -22,6 +22,36 @@ export interface ReferencesSection {
   readonly items: readonly Reference[]
 }
 
+// External references are plain hyperlinks, never embedded, never rehosted.
+// See MEDIA.md at the repo root for the full policy.
+export type ExternalReferenceKind =
+  | 'archive'
+  | 'document'
+  | 'press'
+  | 'scholarship'
+  | 'site'
+
+export interface ExternalReference {
+  readonly kind: ExternalReferenceKind
+  readonly institution: string
+  readonly title: string
+  readonly url: string
+  readonly date?: string
+  readonly accessed: string
+  readonly note: string
+}
+
+export interface ExternalRecordSection {
+  readonly eyebrow: string
+  readonly title: string
+  readonly intro: string
+  readonly accessedLabel: string
+  readonly policyLabel: string
+  readonly policyUrl: string
+  readonly kindLabels: Readonly<Record<ExternalReferenceKind, string>>
+  readonly items: readonly ExternalReference[]
+}
+
 export interface LocaleContent {
   readonly code: string
   readonly label: string
@@ -42,6 +72,7 @@ export interface LocaleContent {
     readonly problem: EditorialSection
     readonly hypothesis: EditorialSection
     readonly stateOfTheArt: EditorialSection
+    readonly externalRecord: ExternalRecordSection
     readonly references: ReferencesSection
   }
   readonly nav: {
@@ -53,6 +84,7 @@ export interface LocaleContent {
       readonly problem: string
       readonly hypothesis: string
       readonly stateOfTheArt: string
+      readonly externalRecord: string
       readonly references: string
     }
   }

@@ -56,7 +56,11 @@ BASE_PATH=/ CANONICAL_ORIGIN=https://example.org npm run build
 
 ## Releases
 
-The site is released in numbered editorial stages. Current release: **v0.4.0 — Editorial architecture**. Later releases extend the research surface without changing the architecture.
+The site is released in numbered editorial stages. Current release: **v0.6.0 — Remote media enrichment**. Later releases extend the research surface without changing the architecture.
+
+## Media policy
+
+All third-party media are referenced externally; nothing is rehosted. See [`MEDIA.md`](./MEDIA.md) for the rules, the provenance format, and the link-vs-embed decision.
 
 ## License
 

@@ -32,7 +32,7 @@ export const home: HomeContent = {
     ],
   },
   colophon: {
-    note: 'This release is v0.4.0 — Editorial architecture. It turns the earlier scaffold into an editorial piece; later releases will expand research without altering the architecture.',
+    note: 'This release is v0.6.0 — Remote media enrichment. The v0.4.0 architecture still holds; the piece now carries a curated external record of primary sources, read as external links, not local assets.',
     license: 'Text: CC BY 4.0 · Code: MIT.',
   },
 }

@@ -43,7 +43,7 @@ export function renderHome(): string {
     <header class="border-b border-rule">
       <div class="mx-auto w-full max-w-6xl px-6 md:px-10 py-5 flex items-center justify-between gap-6">
         <span class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(site.name)}</span>
-        <span class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">v0.4.0 · Editorial architecture</span>
+        <span class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(site.release.version)} · ${escapeHtml(site.release.label)}</span>
       </div>
     </header>
 

@@ -5,6 +5,8 @@ import { site } from '../config.ts'
 import type {
   LocaleContent,
   EditorialSection,
+  ExternalReference,
+  ExternalRecordSection,
   Reference,
   ReferencesSection,
 } from '../content/types.ts'
@@ -32,6 +34,7 @@ function renderTableOfContents(locale: LocaleContent): string {
     { id: 'problem', label: locale.nav.sectionLabels.problem },
     { id: 'hypothesis', label: locale.nav.sectionLabels.hypothesis },
     { id: 'state-of-the-art', label: locale.nav.sectionLabels.stateOfTheArt },
+    { id: 'external-record', label: locale.nav.sectionLabels.externalRecord },
     { id: 'references', label: locale.nav.sectionLabels.references },
   ]
 
@@ -64,6 +67,79 @@ function renderSection(id: string, section: EditorialSection): string {
         </header>
         <div class="md:col-span-8 space-y-5 font-serif text-lg md:text-xl leading-[1.7] max-w-prose">
 ${paragraphs}
+        </div>
+      </section>`
+}
+
+function hostLabel(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return url
+  }
+}
+
+function renderExternalEntry(
+  ref: ExternalReference,
+  kindLabels: ExternalRecordSection['kindLabels'],
+  accessedLabel: string,
+  index: number,
+): string {
+  const number = String(index + 1).padStart(2, '0')
+  const host = hostLabel(ref.url)
+  const kind = kindLabels[ref.kind]
+  const datePart = ref.date ? `<span> · ${escapeHtml(ref.date)}</span>` : ''
+
+  return `
+          <li class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-5 border-t border-rule">
+            <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums">${number}</span>
+            <div class="text-[0.95rem] md:text-base leading-relaxed">
+              <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">
+                <span>${escapeHtml(kind)}</span>
+                <span aria-hidden="true"> · </span>
+                <span>${escapeHtml(ref.institution)}</span>${datePart}
+              </p>
+              <p class="mt-2">
+                <a
+                  href="${escapeAttr(ref.url)}"
+                  rel="noopener noreferrer external"
+                  target="_blank"
+                  class="italic underline-offset-4 hover:underline decoration-rule hover:decoration-ink transition-colors"
+                >${escapeHtml(ref.title)}</a>
+                <span class="ml-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted">${escapeHtml(host)}<span aria-hidden="true"> ↗</span></span>
+              </p>
+              <p class="mt-3 text-muted leading-relaxed">${escapeHtml(ref.note)}</p>
+              <p class="mt-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted">${escapeHtml(accessedLabel)} ${escapeHtml(ref.accessed)}</p>
+            </div>
+          </li>`
+}
+
+function renderExternalRecord(section: ExternalRecordSection): string {
+  const list = section.items
+    .map((ref, i) =>
+      renderExternalEntry(ref, section.kindLabels, section.accessedLabel, i),
+    )
+    .join('\n')
+
+  return `
+      <section id="external-record" class="scroll-mt-16 grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-10 py-16 md:py-24 border-b border-rule">
+        <header class="md:col-span-4">
+          <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(section.eyebrow)}</p>
+          <h2 class="mt-4 font-serif text-3xl md:text-4xl leading-tight tracking-[-0.01em] max-w-md">${escapeHtml(section.title)}</h2>
+          <p class="mt-4 max-w-prose text-base text-muted leading-relaxed">${escapeHtml(section.intro)}</p>
+          <p class="mt-4">
+            <a
+              href="${escapeAttr(section.policyUrl)}"
+              rel="noopener noreferrer external"
+              target="_blank"
+              class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted hover:text-ink underline-offset-4 hover:underline"
+            >${escapeHtml(section.policyLabel)} <span aria-hidden="true">↗</span></a>
+          </p>
+        </header>
+        <div class="md:col-span-8">
+          <ol class="border-b border-rule">
+${list}
+          </ol>
         </div>
       </section>`
 }
@@ -150,6 +226,7 @@ ${toc}
 ${renderSection('problem', locale.sections.problem)}
 ${renderSection('hypothesis', locale.sections.hypothesis)}
 ${renderSection('state-of-the-art', locale.sections.stateOfTheArt)}
+${renderExternalRecord(locale.sections.externalRecord)}
 ${renderReferences(locale.sections.references)}
         </div>
       </div>

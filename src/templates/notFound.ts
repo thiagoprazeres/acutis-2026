@@ -45,7 +45,7 @@ export function renderNotFound(): string {
     </main>
 
     <footer class="mx-auto w-full max-w-6xl px-6 md:px-10 py-10 md:py-14">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">Acutis, 2026 · v0.4.0 · Editorial architecture</p>
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(site.name)} · ${escapeHtml(site.release.version)} · ${escapeHtml(site.release.label)}</p>
     </footer>`
 
   return documentShell({

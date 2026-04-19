@@ -13,4 +13,11 @@ export const site = {
   canonicalOrigin:
     process.env.CANONICAL_ORIGIN ?? 'https://thiagoprazeres.github.io',
   defaultLocale: 'en',
+  // Current editorial release marker surfaced in small UI chrome
+  // (header mark on the index, footer mark on 404). Copy that is visible
+  // inside editorial paragraphs is kept in the locale content files.
+  release: {
+    version: 'v0.6.0',
+    label: 'Remote media enrichment',
+  },
 } as const
