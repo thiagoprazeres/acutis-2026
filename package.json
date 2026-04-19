@@ -1,0 +1,20 @@
+{
+  "name": "acutis-2026",
+  "version": "0.4.0",
+  "description": "A sober multilingual editorial piece about Carlo Acutis, read in a 2026 key.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "check": "tsc --noEmit",
+    "preview": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "@types/node": "^22.9.0",
+    "tailwindcss": "^4.1.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

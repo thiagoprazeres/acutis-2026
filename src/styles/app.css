@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens (Tailwind v4 @theme).
+   Sober editorial palette. System font stacks. No remote typography.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --color-paper: #f6f4ef;
+  --color-ink: #0f0f10;
+  --color-muted: #6a6560;
+  --color-rule: #d9d5cd;
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-serif:
+    "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman",
+    serif;
+  --font-mono:
+    ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Dark mode tokens. Low contrast inversion; still editorial, still quiet.
+   We override the CSS custom properties (Tailwind v4 utilities read them at
+   runtime), not the @theme block, which is compile-time. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #0f0f10;
+    --color-ink: #ece8e0;
+    --color-muted: #8e887f;
+    --color-rule: #2a2823;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Readable prose defaults for <p>/<li> inside editorial columns */
+.max-w-prose {
+  max-width: 65ch;
+}
+
+/* Keep links restrained by default; let Tailwind utilities override where needed */
+a {
+  color: inherit;
+}
+
+/* Accessible focus ring; not overdesigned */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+/* Drop cap first-letter tuning for the lead paragraph */
+.first-letter\:font-serif::first-letter {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}

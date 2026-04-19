@@ -1,2 +1,14 @@
-inputs/
-scripts/
+# local working materials
+/inputs/
+/scripts/bootstrap-github-roadmap.sh
+
+# build artifacts
+/dist/
+/node_modules/
+
+# system
+.DS_Store
+
+# logs
+*.log
+npm-debug.log*
