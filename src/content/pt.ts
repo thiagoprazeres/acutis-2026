@@ -41,16 +41,16 @@ export const pt: LocaleContent = {
       eyebrow: 'Estado da arte',
       title: 'O que já foi dito',
       paragraphs: [
-        'A literatura sobre Acutis inclina-se em duas direções. De um lado, os estudos de religião digital — Heidi Campbell e a distinção entre religion online e online religion, Christopher Helland sobre peregrinação virtual, Michael DiGiovine sobre o culto — o lêem como caso de religião adaptando-se aos novos meios.',
-        'De outro lado, a escrita eclesial e devocional o absorve em categorias já existentes de santidade. O papa Francisco, em Christus Vivit, nomeia-o como modelo de uma fé à vontade com as telas; a canonização de 2025 sela institucionalmente essa leitura.',
-        'Entre essas duas prateleiras, um terceiro registro está pouco habitado. A arquitetura da informação (os padrões de integração de Gregor Hohpe; a escrita clássica de Jakob Nielsen sobre sites como sistemas), a crítica do capitalismo de plataforma (Shoshana Zuboff) e leituras mais antigas da religião como trabalho cultural (Gramsci, Löwy) raramente se reúnem em torno de Acutis. É o quadro que esta peça toma emprestado — não para ampliar a bibliografia, mas para tornar visível a arquitetura.',
+        'A bibliografia existente sobre Acutis se organiza em duas prateleiras. Na prateleira primária — o registro institucional — os artefatos são a própria exposição online, a Christus Vivit, o anúncio da canonização e o trabalho de campo antropológico que começou a descrever o culto. Na prateleira secundária — a literatura acadêmica — o caso recai quase inteiramente sobre os estudos de religião digital: Campbell e a distinção entre religion online e online religion, Helland sobre peregrinação virtual, DiGiovine sobre a santidade contemporânea e a tradição de handbooks que cresceu em torno dessas leituras.',
+        'A escrita eclesial e devocional corre ao lado das duas prateleiras e absorve Acutis em categorias já dadas de santidade. O papa Francisco, em Christus Vivit, nomeia-o como modelo de uma fé à vontade com as telas; a canonização de 2025, celebrada sob Leão XIV, sela institucionalmente essa leitura. A leitura é legítima, mas lê a vida, não a obra.',
+        'Um terceiro registro está pouco habitado. As teorias clássicas da mediação e da circulação (Peters, Debray, Couldry e Hepp), o cânone pragmático da arquitetura da informação (Rosenfeld, Morville e Arango; Hohpe sobre padrões de integração; Bolter e Grusin sobre remediação) e leituras mais antigas da religião como trabalho cultural (Gramsci, Löwy; mais recentemente Zuboff sobre a captura pela plataforma) raramente se cruzam em torno de Acutis. É o quadro que esta peça toma emprestado — não para inflar a bibliografia, mas para tornar visível a arquitetura numa linguagem em que a própria arquitetura foi construída.',
       ],
     },
     externalRecord: {
       eyebrow: 'Registro externo',
       title: 'Fontes primárias e rastros institucionais',
       intro:
-        'Não são downloads. São referências externas — links simples para as fontes que esta peça lê. Se um host institucional mudar, o texto permanece; o link é o rastro, não o artefato.',
+        'Os ancoramentos documentais primários que esta peça lê: o artefato em si, os enquadramentos institucionais que o cercam e o primeiro trabalho de campo acadêmico a descrever o culto. Não são downloads. São links simples; se um host institucional mudar, o texto permanece; o link é o rastro, não o artefato.',
       accessedLabel: 'acessado em',
       policyLabel: 'Ver a política de mídia externa',
       policyUrl: POLICY_URL,
@@ -82,57 +82,151 @@ export const pt: LocaleContent = {
     },
     references: {
       eyebrow: 'Referências',
-      title: 'Uma bibliografia curta e deliberada',
+      title: 'Literatura secundária, agrupada por registro',
       intro:
-        'A lista é intencionalmente pequena. Cada entrada está aqui porque o argumento se apoia nela. Leituras adicionais pertencem a releases posteriores desta peça.',
-      items: [
+        'A literatura secundária em que a peça se apoia, agrupada por registro em vez de listada em bloco. Os ancoramentos documentais primários permanecem no registro externo acima. A lista é deliberada, não exaustiva: cada entrada está aqui porque faz trabalho real no argumento.',
+      groups: [
         {
-          author: 'Campbell, H. A. (org.)',
-          year: '2012',
-          title: 'Digital Religion: Understanding Religious Practice in New Media Worlds',
-          publisher: 'Routledge',
+          heading: 'Carlo Acutis e a santidade contemporânea',
+          description:
+            'O corpo tênue mas crescente de bibliografia que lê Acutis diretamente, ao lado dos documentos eclesiais que o enquadram.',
+          items: [
+            {
+              author: 'DiGiovine, M. A.',
+              year: '2023',
+              title: 'Carlo Acutis: Modern Sainthood and (Virtual) Pilgrimage',
+              publisher: 'Tese de doutorado, West Chester University',
+            },
+            {
+              author: 'Francisco',
+              year: '2019',
+              title: 'Christus Vivit (§104–106)',
+              publisher: 'Exortação apostólica, Vaticano',
+            },
+          ],
         },
         {
-          author: 'Campbell, H. A., e R. Tsuria (orgs.)',
-          year: '2022',
-          title: 'Digital Religion: Understanding Religious Practice in Digital Media',
-          publisher: 'Routledge, 2.ª ed.',
+          heading: 'Estudos de religião digital',
+          description:
+            'A prateleira em que o caso Acutis é mais frequentemente alocado: religião e internet, peregrinação virtual, prática online/offline.',
+          items: [
+            {
+              author: 'Campbell, H. A. (org.)',
+              year: '2012',
+              title: 'Digital Religion: Understanding Religious Practice in New Media Worlds',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'Campbell, H. A., e R. Tsuria (orgs.)',
+              year: '2022',
+              title: 'Digital Religion: Understanding Religious Practice in Digital Media',
+              publisher: 'Routledge, 2.ª ed.',
+            },
+            {
+              author: 'Helland, C.',
+              year: '2016',
+              title: 'Digital Religion',
+              publisher: 'In The Handbook of Religion and Communication, Wiley',
+            },
+            {
+              author: 'Hoover, S. M.',
+              year: '2006',
+              title: 'Religion in the Media Age',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'Dawson, L. L., e D. E. Cowan (orgs.)',
+              year: '2004',
+              title: 'Religion Online: Finding Faith on the Internet',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'O’Leary, S. D.',
+              year: '1996',
+              title: 'Cyberspace as Sacred Space: Communicating Religion on Computer Networks',
+              publisher: 'Journal of the American Academy of Religion 64 (4): 781–808',
+            },
+          ],
         },
         {
-          author: 'DiGiovine, M. A.',
-          year: '2023',
-          title: 'Carlo Acutis: Modern Sainthood and (Virtual) Pilgrimage',
-          publisher: 'Tese de doutorado, West Chester University',
+          heading: 'Arquitetura da comunicação, mediação e circulação',
+          description:
+            'O registro em que a peça efetivamente lê Acutis: como objetos são feitos para circular, como interfaces carregam argumentos, como mensagens se mantêm coerentes ao longo de uma pilha.',
+          items: [
+            {
+              author: 'Hohpe, G., e B. Woolf',
+              year: '2003',
+              title: 'Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions',
+              publisher: 'Addison-Wesley',
+            },
+            {
+              author: 'Rosenfeld, L., P. Morville, e J. Arango',
+              year: '2015',
+              title: 'Information Architecture: For the Web and Beyond',
+              publisher: "O'Reilly, 4.ª ed.",
+            },
+            {
+              author: 'Bolter, J. D., e R. Grusin',
+              year: '1999',
+              title: 'Remediation: Understanding New Media',
+              publisher: 'MIT Press',
+            },
+            {
+              author: 'Peters, J. D.',
+              year: '1999',
+              title: 'Speaking into the Air: A History of the Idea of Communication',
+              publisher: 'University of Chicago Press',
+            },
+            {
+              author: 'Couldry, N., e A. Hepp',
+              year: '2017',
+              title: 'The Mediated Construction of Reality',
+              publisher: 'Polity',
+            },
+            {
+              author: 'Debray, R.',
+              year: '2000',
+              title: 'Transmitting Culture',
+              publisher: 'Columbia University Press',
+            },
+          ],
         },
         {
-          author: 'Francisco',
-          year: '2019',
-          title: 'Christus Vivit',
-          publisher: 'Exortação apostólica, Vaticano',
-        },
-        {
-          author: 'Hohpe, G., e B. Woolf',
-          year: '2003',
-          title: 'Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions',
-          publisher: 'Addison-Wesley',
-        },
-        {
-          author: 'Helland, C.',
-          year: '2016',
-          title: 'Digital Religion',
-          publisher: 'In The Handbook of Religion and Communication, Wiley',
-        },
-        {
-          author: 'Löwy, M.',
-          year: '2005',
-          title: 'The Theory of Revolution in the Young Marx',
-          publisher: 'Haymarket',
-        },
-        {
-          author: 'Zuboff, S.',
-          year: '2019',
-          title: 'The Age of Surveillance Capitalism',
-          publisher: 'PublicAffairs',
+          heading: 'Enquadramento crítico: religião, poder e plataformas',
+          description:
+            'Leituras antigas e recentes da religião como trabalho cultural, mantidas à mão para resistir à redução de Acutis à pura devoção ou à pura plataforma.',
+          items: [
+            {
+              author: 'Gramsci, A.',
+              year: '1971',
+              title: 'Selections from the Prison Notebooks',
+              publisher: 'International Publishers (org. Q. Hoare e G. Nowell Smith)',
+            },
+            {
+              author: 'Löwy, M.',
+              year: '1996',
+              title: 'The War of Gods: Religion and Politics in Latin America',
+              publisher: 'Verso',
+            },
+            {
+              author: 'Anderson, B.',
+              year: '2006',
+              title: 'Imagined Communities: Reflections on the Origin and Spread of Nationalism',
+              publisher: 'Verso, ed. rev.',
+            },
+            {
+              author: 'Castells, M.',
+              year: '2010',
+              title: 'The Power of Identity',
+              publisher: 'Wiley-Blackwell, 2.ª ed.',
+            },
+            {
+              author: 'Zuboff, S.',
+              year: '2019',
+              title: 'The Age of Surveillance Capitalism',
+              publisher: 'PublicAffairs',
+            },
+          ],
         },
       ],
     },
@@ -151,7 +245,7 @@ export const pt: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Esta página pertence ao release v0.6.0 — Enriquecimento de mídia externa. A arquitetura editorial da v0.4.0 permanece; as referências externas entram agora no texto como links simples, não como assets locais.',
+    note: 'Esta página pertence ao release v0.8.0 — Edição de pesquisa. A arquitetura editorial da v0.4.0 permanece; a bibliografia agora é agrupada por registro e a distinção entre ancoramentos documentais primários e literatura secundária se torna explícita.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }

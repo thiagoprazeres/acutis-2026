@@ -56,7 +56,7 @@ BASE_PATH=/ CANONICAL_ORIGIN=https://example.org npm run build
 
 ## Releases
 
-The site is released in numbered editorial stages. Current release: **v0.6.0 — Remote media enrichment**. Later releases extend the research surface without changing the architecture.
+The site is released in numbered editorial stages. Current release: **v0.8.0 — Research edition**. The bibliography is now grouped by register, and the split between primary documentary anchors (kept in the external record) and secondary literature (grouped thematically: Acutis and contemporary sainthood; digital religion studies; communication architecture, mediation and circulation; critical framing) is explicit. Later releases extend the research surface without changing the architecture.
 
 ## Media policy
 

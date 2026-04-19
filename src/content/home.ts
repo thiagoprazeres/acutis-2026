@@ -17,8 +17,8 @@ export const home: HomeContent = {
   manifesto: [
     'This site is a single piece in five languages. It does not set out to prove that Carlo Acutis was a saint, and it does not set out to prove that he was not. It begins a step before: it asks what kind of object his online work actually is.',
     'The object in question is a small exhibition of Eucharistic miracles — a set of printable panels, a multilingual website, a quiet network of parishes and devotional associations. Read as devotion, it is a cult. Read as code, it is a communication architecture.',
-    'The piece reads the second register. It treats the exhibition as a deliberate design — content, interface, distribution, legitimation, ritual — and places it in conversation with digital religion studies, information architecture and the critique of platform capitalism.',
-    'The text is short by design. Each language below opens the same argument under the same four headings: problem, hypothesis, state of the art, references.',
+    'The piece reads the second register. It treats the exhibition as a deliberate design — content, interface, distribution, legitimation, ritual — and places it in conversation with digital religion studies, information architecture, mediation theory and the critique of platform capitalism.',
+    'The text is short by design, but the research layer behind it is not a scaffold: primary documentary anchors are kept explicit, and the secondary literature is grouped by register. Each language below opens the same argument under the same five headings: problem, hypothesis, state of the art, external record, references.',
   ],
   selector: {
     heading: 'Read in',
@@ -28,11 +28,11 @@ export const home: HomeContent = {
     heading: 'A note on method',
     paragraphs: [
       'The site is static, multilingual and small by design. No router. No client-side translation layer. No CMS. Each language lives as its own page; switching languages is a link, not a runtime event.',
-      'Sources are cited in place. External assets are referenced, never rehosted. Extensions — bibliography, media enrichment, wider research surface — belong to later releases, tracked as numbered editorial stages.',
+      'Sources are cited in place. External assets are referenced, never rehosted. The bibliography separates the primary documentary record (the artefact itself, Christus Vivit, the canonization, the first ethnographic reading) from the secondary literature, and the secondary literature is grouped by register: digital religion studies, communication architecture and mediation, and the older critique of religion as cultural work.',
     ],
   },
   colophon: {
-    note: 'This release is v0.6.0 — Remote media enrichment. The v0.4.0 architecture still holds; the piece now carries a curated external record of primary sources, read as external links, not local assets.',
+    note: 'This release is v0.8.0 — Research edition. The v0.4.0 architecture still holds; the bibliography is now grouped by register, and the split between primary documentary anchors and secondary literature is explicit.',
     license: 'Text: CC BY 4.0 · Code: MIT.',
   },
 }

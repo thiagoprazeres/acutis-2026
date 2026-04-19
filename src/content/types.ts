@@ -15,11 +15,20 @@ export interface EditorialSection {
   readonly paragraphs: readonly string[]
 }
 
+// Secondary literature is organised in thematic groups so the bibliography
+// reads as a research layer rather than a flat list. Primary documentary
+// anchors live in `externalRecord`; scholarly literature lives here.
+export interface ReferenceGroup {
+  readonly heading: string
+  readonly description?: string
+  readonly items: readonly Reference[]
+}
+
 export interface ReferencesSection {
   readonly eyebrow: string
   readonly title: string
   readonly intro?: string
-  readonly items: readonly Reference[]
+  readonly groups: readonly ReferenceGroup[]
 }
 
 // External references are plain hyperlinks, never embedded, never rehosted.

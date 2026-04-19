@@ -150,15 +150,15 @@ function renderReferenceEntry(ref: Reference, index: number): string {
   const tailHtml = tail ? `<span class="block text-muted mt-1">${escapeHtml(tail)}</span>` : ''
 
   return `
-          <li class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-4 border-t border-rule">
-            <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums">${number}</span>
-            <div class="text-[0.95rem] md:text-base leading-relaxed">
-              <span class="font-medium">${escapeHtml(ref.author)}</span>
-              <span class="text-muted"> · ${escapeHtml(ref.year)}</span>
-              <span class="block italic mt-1">${escapeHtml(ref.title)}</span>
-              ${tailHtml}
-            </div>
-          </li>`
+            <li class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-4 border-t border-rule">
+              <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums">${number}</span>
+              <div class="text-[0.95rem] md:text-base leading-relaxed">
+                <span class="font-medium">${escapeHtml(ref.author)}</span>
+                <span class="text-muted"> · ${escapeHtml(ref.year)}</span>
+                <span class="block italic mt-1">${escapeHtml(ref.title)}</span>
+                ${tailHtml}
+              </div>
+            </li>`
 }
 
 function renderReferences(section: ReferencesSection): string {
@@ -166,8 +166,26 @@ function renderReferences(section: ReferencesSection): string {
     ? `<p class="mt-4 max-w-prose text-base text-muted leading-relaxed">${escapeHtml(section.intro)}</p>`
     : ''
 
-  const list = section.items
-    .map((ref, i) => renderReferenceEntry(ref, i))
+  let runningIndex = 0
+  const groupsHtml = section.groups
+    .map((group) => {
+      const entries = group.items
+        .map((ref) => renderReferenceEntry(ref, runningIndex++))
+        .join('\n')
+      const description = group.description
+        ? `<p class="mt-2 max-w-prose text-[0.95rem] text-muted leading-relaxed">${escapeHtml(group.description)}</p>`
+        : ''
+      return `
+          <section class="mt-10 first:mt-0">
+            <header class="pb-4 border-b border-rule">
+              <h3 class="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-ink">${escapeHtml(group.heading)}</h3>
+              ${description}
+            </header>
+            <ol>
+${entries}
+            </ol>
+          </section>`
+    })
     .join('\n')
 
   return `
@@ -178,9 +196,7 @@ function renderReferences(section: ReferencesSection): string {
           ${intro}
         </header>
         <div class="md:col-span-8">
-          <ol class="border-b border-rule">
-${list}
-          </ol>
+${groupsHtml}
         </div>
       </section>`
 }

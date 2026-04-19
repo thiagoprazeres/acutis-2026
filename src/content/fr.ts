@@ -41,16 +41,16 @@ export const fr: LocaleContent = {
       eyebrow: 'État de l’art',
       title: 'Ce qui a déjà été dit',
       paragraphs: [
-        'La littérature sur Acutis se tourne vers deux directions. D’un côté, les études de religion numérique — Heidi Campbell sur la distinction entre religion online et online religion, Christopher Helland sur le pèlerinage virtuel, Michael DiGiovine sur le culte — le lisent comme un cas de religion s’adaptant aux nouveaux médias.',
-        'De l’autre, l’écriture ecclésiale et dévotionnelle l’absorbe dans des catégories déjà données de sainteté. Le pape François, dans Christus Vivit, le nomme comme modèle d’une foi à l’aise avec les écrans ; la canonisation de 2025 scelle institutionnellement cette lecture.',
-        'Entre ces deux rayonnages, un troisième registre reste peu habité. L’architecture de l’information (les patterns d’intégration de Gregor Hohpe ; l’écriture classique de Jakob Nielsen sur les sites comme systèmes), la critique du capitalisme de plateforme (Shoshana Zuboff) et des lectures plus anciennes de la religion comme travail culturel (Gramsci, Löwy) se rencontrent rarement autour d’Acutis. C’est le cadre que cette pièce emprunte — non pour élargir la bibliographie, mais pour rendre l’architecture visible.',
+        'La bibliographie existante sur Acutis se répartit sur deux rayonnages. Sur le rayonnage primaire — le registre institutionnel — les artefacts sont l’exposition en ligne elle-même, Christus Vivit, l’annonce de la canonisation et le travail ethnographique qui a commencé à décrire le culte. Sur le rayonnage secondaire — la littérature académique — le cas relève presque uniquement des études de religion numérique : Campbell sur la distinction entre religion online et online religion, Helland sur le pèlerinage virtuel, DiGiovine sur la sainteté contemporaine, et la tradition de handbooks qui s’est développée autour d’eux.',
+        'L’écriture ecclésiale et dévotionnelle court à côté des deux rayonnages et absorbe Acutis dans des catégories déjà données de sainteté. Le pape François, dans Christus Vivit, le nomme comme modèle d’une foi à l’aise avec les écrans ; la canonisation de 2025, célébrée sous Léon XIV, scelle institutionnellement cette lecture. La lecture est légitime, mais elle lit la vie, non l’œuvre.',
+        'Un troisième registre reste peu habité. Les théories classiques de la médiation et de la circulation (Peters, Debray, Couldry et Hepp), le canon pragmatique de l’architecture de l’information (Rosenfeld, Morville et Arango ; Hohpe sur les patterns d’intégration ; Bolter et Grusin sur la remédiation), et des lectures plus anciennes de la religion comme travail culturel (Gramsci, Löwy ; plus récemment Zuboff sur la capture par la plateforme) convergent rarement autour d’Acutis. C’est le cadre que cette pièce emprunte — non pour grossir la bibliographie, mais pour rendre visible l’architecture dans la langue dans laquelle l’architecture elle-même a été construite.',
       ],
     },
     externalRecord: {
       eyebrow: 'Archives externes',
       title: 'Sources primaires et traces institutionnelles',
       intro:
-        'Ce ne sont pas des téléchargements. Ce sont des références externes — de simples liens vers les sources que cette pièce lit. Si un hôte institutionnel bouge, le texte demeure ; le lien est la trace, non l’artefact.',
+        'Les ancrages documentaires primaires que cette pièce lit : l’artefact lui-même, les cadres institutionnels qui l’entourent et le premier travail de terrain à avoir commencé à décrire le culte. Ce ne sont pas des téléchargements. Ce sont de simples liens ; si un hôte institutionnel bouge, le texte demeure ; le lien est la trace, non l’artefact.',
       accessedLabel: 'consulté le',
       policyLabel: 'Voir la politique des médias externes',
       policyUrl: POLICY_URL,
@@ -82,57 +82,151 @@ export const fr: LocaleContent = {
     },
     references: {
       eyebrow: 'Références',
-      title: 'Une bibliographie courte et délibérée',
+      title: 'Littérature secondaire, regroupée par registre',
       intro:
-        'La liste est volontairement réduite. Chaque entrée figure ici parce que l’argument s’y appuie. Des lectures supplémentaires relèveront des publications ultérieures de cette pièce.',
-      items: [
+        'La littérature secondaire sur laquelle la pièce s’appuie, regroupée par registre plutôt que listée en bloc. Les ancrages documentaires primaires restent dans les archives externes ci-dessus. La liste est délibérée, non exhaustive : chaque entrée y figure parce qu’elle fait un travail réel dans l’argument.',
+      groups: [
         {
-          author: 'Campbell, H. A. (dir.)',
-          year: '2012',
-          title: 'Digital Religion: Understanding Religious Practice in New Media Worlds',
-          publisher: 'Routledge',
+          heading: 'Carlo Acutis et la sainteté contemporaine',
+          description:
+            'Le corpus mince mais croissant d’études qui lisent Acutis directement, aux côtés des documents ecclésiaux qui l’encadrent.',
+          items: [
+            {
+              author: 'DiGiovine, M. A.',
+              year: '2023',
+              title: 'Carlo Acutis: Modern Sainthood and (Virtual) Pilgrimage',
+              publisher: 'Thèse de doctorat, West Chester University',
+            },
+            {
+              author: 'François',
+              year: '2019',
+              title: 'Christus Vivit (§104–106)',
+              publisher: 'Exhortation apostolique, Vatican',
+            },
+          ],
         },
         {
-          author: 'Campbell, H. A., et R. Tsuria (dir.)',
-          year: '2022',
-          title: 'Digital Religion: Understanding Religious Practice in Digital Media',
-          publisher: 'Routledge, 2ᵉ éd.',
+          heading: 'Études de religion numérique',
+          description:
+            'Le rayonnage sur lequel le cas Acutis est le plus souvent placé : religion et internet, pèlerinage virtuel, pratique en ligne/hors ligne.',
+          items: [
+            {
+              author: 'Campbell, H. A. (dir.)',
+              year: '2012',
+              title: 'Digital Religion: Understanding Religious Practice in New Media Worlds',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'Campbell, H. A., et R. Tsuria (dir.)',
+              year: '2022',
+              title: 'Digital Religion: Understanding Religious Practice in Digital Media',
+              publisher: 'Routledge, 2ᵉ éd.',
+            },
+            {
+              author: 'Helland, C.',
+              year: '2016',
+              title: 'Digital Religion',
+              publisher: 'In The Handbook of Religion and Communication, Wiley',
+            },
+            {
+              author: 'Hoover, S. M.',
+              year: '2006',
+              title: 'Religion in the Media Age',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'Dawson, L. L., et D. E. Cowan (dir.)',
+              year: '2004',
+              title: 'Religion Online: Finding Faith on the Internet',
+              publisher: 'Routledge',
+            },
+            {
+              author: 'O’Leary, S. D.',
+              year: '1996',
+              title: 'Cyberspace as Sacred Space: Communicating Religion on Computer Networks',
+              publisher: 'Journal of the American Academy of Religion 64 (4) : 781–808',
+            },
+          ],
         },
         {
-          author: 'DiGiovine, M. A.',
-          year: '2023',
-          title: 'Carlo Acutis: Modern Sainthood and (Virtual) Pilgrimage',
-          publisher: 'Thèse de doctorat, West Chester University',
+          heading: 'Architecture de la communication, médiation et circulation',
+          description:
+            'Le registre dans lequel la pièce lit effectivement Acutis : comment on fait voyager des objets, comment les interfaces portent des arguments, comment des messages restent cohérents à travers une pile.',
+          items: [
+            {
+              author: 'Hohpe, G., et B. Woolf',
+              year: '2003',
+              title: 'Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions',
+              publisher: 'Addison-Wesley',
+            },
+            {
+              author: 'Rosenfeld, L., P. Morville, et J. Arango',
+              year: '2015',
+              title: 'Information Architecture: For the Web and Beyond',
+              publisher: "O'Reilly, 4ᵉ éd.",
+            },
+            {
+              author: 'Bolter, J. D., et R. Grusin',
+              year: '1999',
+              title: 'Remediation: Understanding New Media',
+              publisher: 'MIT Press',
+            },
+            {
+              author: 'Peters, J. D.',
+              year: '1999',
+              title: 'Speaking into the Air: A History of the Idea of Communication',
+              publisher: 'University of Chicago Press',
+            },
+            {
+              author: 'Couldry, N., et A. Hepp',
+              year: '2017',
+              title: 'The Mediated Construction of Reality',
+              publisher: 'Polity',
+            },
+            {
+              author: 'Debray, R.',
+              year: '2000',
+              title: 'Transmitting Culture',
+              publisher: 'Columbia University Press',
+            },
+          ],
         },
         {
-          author: 'François',
-          year: '2019',
-          title: 'Christus Vivit',
-          publisher: 'Exhortation apostolique, Vatican',
-        },
-        {
-          author: 'Hohpe, G., et B. Woolf',
-          year: '2003',
-          title: 'Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions',
-          publisher: 'Addison-Wesley',
-        },
-        {
-          author: 'Helland, C.',
-          year: '2016',
-          title: 'Digital Religion',
-          publisher: 'In The Handbook of Religion and Communication, Wiley',
-        },
-        {
-          author: 'Löwy, M.',
-          year: '2005',
-          title: 'The Theory of Revolution in the Young Marx',
-          publisher: 'Haymarket',
-        },
-        {
-          author: 'Zuboff, S.',
-          year: '2019',
-          title: 'The Age of Surveillance Capitalism',
-          publisher: 'PublicAffairs',
+          heading: 'Cadre critique : religion, pouvoir et plateformes',
+          description:
+            'Lectures anciennes et récentes de la religion comme travail culturel, gardées à portée de main pour résister à la réduction d’Acutis à la pure dévotion ou à la pure plateforme.',
+          items: [
+            {
+              author: 'Gramsci, A.',
+              year: '1971',
+              title: 'Selections from the Prison Notebooks',
+              publisher: 'International Publishers (dir. Q. Hoare et G. Nowell Smith)',
+            },
+            {
+              author: 'Löwy, M.',
+              year: '1996',
+              title: 'The War of Gods: Religion and Politics in Latin America',
+              publisher: 'Verso',
+            },
+            {
+              author: 'Anderson, B.',
+              year: '2006',
+              title: 'Imagined Communities: Reflections on the Origin and Spread of Nationalism',
+              publisher: 'Verso, éd. rev.',
+            },
+            {
+              author: 'Castells, M.',
+              year: '2010',
+              title: 'The Power of Identity',
+              publisher: 'Wiley-Blackwell, 2ᵉ éd.',
+            },
+            {
+              author: 'Zuboff, S.',
+              year: '2019',
+              title: 'The Age of Surveillance Capitalism',
+              publisher: 'PublicAffairs',
+            },
+          ],
         },
       ],
     },
@@ -151,7 +245,7 @@ export const fr: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Cette page appartient à la version v0.6.0 — Enrichissement des médias externes. L’architecture éditoriale de la v0.4.0 tient ; les références externes entrent désormais dans le texte comme de simples liens, non comme des ressources locales.',
+    note: 'Cette page appartient à la version v0.8.0 — Édition de recherche. L’architecture éditoriale de la v0.4.0 tient ; la bibliographie est désormais regroupée par registre et la distinction entre ancrages documentaires primaires et littérature secondaire est explicite.',
     license: 'Texte : CC BY 4.0 · Code : MIT.',
   },
 }
