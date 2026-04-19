@@ -50,7 +50,7 @@ Every external reference visible on the site must carry, at minimum:
 - **Date** — the publication or event date, when applicable.
 - **Accessed** — the ISO date the reference was curated.
 
-Provenance lives in `src/content/<locale>.ts` under the `externalRecord` section. A reference without a clear institution does not ship.
+Shared provenance lives in `src/content/externalAnchors.ts`; translated notes live in each `src/content/<locale>.ts` file under the `externalRecord` section. A reference without a clear institution does not ship.
 
 ## Fallback behavior
 

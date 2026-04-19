@@ -16,7 +16,7 @@ function renderLanguageCard(locale: (typeof locales)[number]): string {
           >
             <div class="flex items-baseline justify-between gap-4">
               <span class="font-serif text-2xl tracking-tight">${escapeHtml(locale.label)}</span>
-              <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted">${escapeHtml(locale.code)}</span>
+              <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted" aria-hidden="true">${escapeHtml(locale.code)}</span>
             </div>
             <p class="mt-4 text-sm text-muted leading-relaxed">
               ${escapeHtml(locale.masthead.subtitle)}
@@ -38,7 +38,7 @@ export function renderHome(): string {
     .map((p) => `          <p>${escapeHtml(p)}</p>`)
     .join('\n')
 
-  const body = `    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+  const body = `    <a href="#main" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
 
     <header class="border-b border-rule">
       <div class="mx-auto w-full max-w-6xl px-6 md:px-10 py-5 flex items-center justify-between gap-6">
@@ -54,20 +54,20 @@ export function renderHome(): string {
         <p class="mt-6 font-serif text-xl md:text-2xl leading-snug text-muted max-w-3xl">${escapeHtml(home.masthead.tagline)}</p>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-16 md:py-24 border-b border-rule">
+      <section aria-labelledby="manifesto-heading" class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-16 md:py-24 border-b border-rule">
         <div class="md:col-span-4">
-          <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">Manifesto</p>
+          <h2 id="manifesto-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">Manifesto</h2>
         </div>
         <div class="md:col-span-8 space-y-5 font-serif text-lg md:text-xl leading-[1.6] max-w-prose">
 ${manifestoParagraphs}
         </div>
       </section>
 
-      <section class="py-16 md:py-24 border-b border-rule">
+      <section aria-labelledby="language-selector-heading" class="py-16 md:py-24 border-b border-rule">
         <div class="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(home.selector.heading)}</p>
-            <h2 class="mt-3 font-serif text-3xl md:text-4xl tracking-tight">Choose a language</h2>
+            <h2 id="language-selector-heading" class="mt-3 font-serif text-3xl md:text-4xl tracking-tight">Choose a language</h2>
           </div>
           <p class="max-w-md text-sm text-muted leading-relaxed">
             ${escapeHtml(home.selector.hint)}
@@ -79,9 +79,9 @@ ${languageCards}
         </ul>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-16 md:py-24 border-b border-rule">
+      <section aria-labelledby="method-heading" class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-16 md:py-24 border-b border-rule">
         <div class="md:col-span-4">
-          <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(home.method.heading)}</p>
+          <h2 id="method-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(home.method.heading)}</h2>
         </div>
         <div class="md:col-span-8 space-y-5 font-serif text-base md:text-lg leading-[1.7] text-muted max-w-prose">
 ${methodParagraphs}

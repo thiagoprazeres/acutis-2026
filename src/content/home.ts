@@ -32,7 +32,7 @@ export const home: HomeContent = {
     ],
   },
   colophon: {
-    note: 'This release is v0.8.0 — Research edition. The v0.4.0 architecture still holds; the bibliography is now grouped by register, and the split between primary documentary anchors and secondary literature is explicit.',
+    note: 'This release is v0.9.0 — Public beta. The editorial architecture still holds; this beta tightens accessibility, public references and reading conditions for review.',
     license: 'Text: CC BY 4.0 · Code: MIT.',
   },
 }

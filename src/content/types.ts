@@ -74,6 +74,7 @@ export interface LocaleContent {
     readonly eyebrow: string
     readonly title: string
     readonly subtitle: string
+    readonly leadLabel: string
     readonly lead: string
     readonly byline: string
   }
@@ -89,6 +90,8 @@ export interface LocaleContent {
     readonly otherLanguages: string
     readonly backToIndex: string
     readonly onThisPage: string
+    // Screen-reader only hint appended to outbound links that open in a new tab.
+    readonly opensInNewTab: string
     readonly sectionLabels: {
       readonly problem: string
       readonly hypothesis: string

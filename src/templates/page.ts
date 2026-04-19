@@ -41,17 +41,17 @@ function renderTableOfContents(locale: LocaleContent): string {
   const list = items
     .map(
       (it, i) =>
-        `<li class="flex items-baseline gap-3"><span class="font-mono text-[0.7rem] text-muted tabular-nums">${String(i + 1).padStart(2, '0')}</span><a class="underline-offset-4 hover:underline" href="#${escapeAttr(it.id)}">${escapeHtml(it.label)}</a></li>`,
+        `<li class="flex items-baseline gap-3"><span class="font-mono text-[0.7rem] text-muted tabular-nums" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><a class="underline-offset-4 hover:underline" href="#${escapeAttr(it.id)}">${escapeHtml(it.label)}</a></li>`,
     )
     .join('\n            ')
 
   return `
-      <aside class="md:col-span-4 md:sticky md:top-8 self-start">
-        <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(locale.nav.onThisPage)}</p>
+      <nav aria-label="${escapeAttr(locale.nav.onThisPage)}" class="md:col-span-4 md:sticky md:top-8 self-start">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted" aria-hidden="true">${escapeHtml(locale.nav.onThisPage)}</p>
         <ol class="mt-4 space-y-2 text-sm">
             ${list}
         </ol>
-      </aside>`
+      </nav>`
 }
 
 function renderSection(id: string, section: EditorialSection): string {
@@ -83,6 +83,7 @@ function renderExternalEntry(
   ref: ExternalReference,
   kindLabels: ExternalRecordSection['kindLabels'],
   accessedLabel: string,
+  opensInNewTab: string,
   index: number,
 ): string {
   const number = String(index + 1).padStart(2, '0')
@@ -92,7 +93,7 @@ function renderExternalEntry(
 
   return `
           <li class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-5 border-t border-rule">
-            <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums">${number}</span>
+            <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums" aria-hidden="true">${number}</span>
             <div class="text-[0.95rem] md:text-base leading-relaxed">
               <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">
                 <span>${escapeHtml(kind)}</span>
@@ -105,8 +106,8 @@ function renderExternalEntry(
                   rel="noopener noreferrer external"
                   target="_blank"
                   class="italic underline-offset-4 hover:underline decoration-rule hover:decoration-ink transition-colors"
-                >${escapeHtml(ref.title)}</a>
-                <span class="ml-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted">${escapeHtml(host)}<span aria-hidden="true"> ↗</span></span>
+                >${escapeHtml(ref.title)}<span class="sr-only"> ${escapeHtml(opensInNewTab)}</span></a>
+                <span class="ml-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted" aria-hidden="true">${escapeHtml(host)} ↗</span>
               </p>
               <p class="mt-3 text-muted leading-relaxed">${escapeHtml(ref.note)}</p>
               <p class="mt-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted">${escapeHtml(accessedLabel)} ${escapeHtml(ref.accessed)}</p>
@@ -114,10 +115,19 @@ function renderExternalEntry(
           </li>`
 }
 
-function renderExternalRecord(section: ExternalRecordSection): string {
+function renderExternalRecord(
+  section: ExternalRecordSection,
+  opensInNewTab: string,
+): string {
   const list = section.items
     .map((ref, i) =>
-      renderExternalEntry(ref, section.kindLabels, section.accessedLabel, i),
+      renderExternalEntry(
+        ref,
+        section.kindLabels,
+        section.accessedLabel,
+        opensInNewTab,
+        i,
+      ),
     )
     .join('\n')
 
@@ -133,7 +143,7 @@ function renderExternalRecord(section: ExternalRecordSection): string {
               rel="noopener noreferrer external"
               target="_blank"
               class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted hover:text-ink underline-offset-4 hover:underline"
-            >${escapeHtml(section.policyLabel)} <span aria-hidden="true">↗</span></a>
+            >${escapeHtml(section.policyLabel)}<span class="sr-only"> ${escapeHtml(opensInNewTab)}</span> <span aria-hidden="true">↗</span></a>
           </p>
         </header>
         <div class="md:col-span-8">
@@ -151,7 +161,7 @@ function renderReferenceEntry(ref: Reference, index: number): string {
 
   return `
             <li class="grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 py-4 border-t border-rule">
-              <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums">${number}</span>
+              <span class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted pt-1 tabular-nums" aria-hidden="true">${number}</span>
               <div class="text-[0.95rem] md:text-base leading-relaxed">
                 <span class="font-medium">${escapeHtml(ref.author)}</span>
                 <span class="text-muted"> · ${escapeHtml(ref.year)}</span>
@@ -206,7 +216,7 @@ export function renderPage(locale: LocaleContent): string {
   const switcher = renderLanguageSwitcher(locale)
   const toc = renderTableOfContents(locale)
 
-  const body = `    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 focus:text-sm">${escapeHtml(locale.nav.skipToContent)}</a>
+  const body = `    <a href="#main" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 focus:text-sm">${escapeHtml(locale.nav.skipToContent)}</a>
 
     <header class="border-b border-rule">
       <div class="mx-auto w-full max-w-6xl px-6 md:px-10 py-5 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -226,9 +236,9 @@ ${switcher}
         <p class="mt-6 font-serif text-xl md:text-2xl leading-snug text-muted max-w-3xl">${escapeHtml(locale.masthead.subtitle)}</p>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-12 md:py-16 border-b border-rule">
+      <section aria-labelledby="lead-heading" class="grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-10 py-12 md:py-16 border-b border-rule">
         <div class="md:col-span-4">
-          <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">Lead</p>
+          <h2 id="lead-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(locale.masthead.leadLabel)}</h2>
           <p class="mt-4 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-muted">${escapeHtml(locale.masthead.byline)}</p>
         </div>
         <div class="md:col-span-8 font-serif text-xl md:text-2xl leading-[1.55] text-ink/90 max-w-prose">
@@ -242,7 +252,7 @@ ${toc}
 ${renderSection('problem', locale.sections.problem)}
 ${renderSection('hypothesis', locale.sections.hypothesis)}
 ${renderSection('state-of-the-art', locale.sections.stateOfTheArt)}
-${renderExternalRecord(locale.sections.externalRecord)}
+${renderExternalRecord(locale.sections.externalRecord, locale.nav.opensInNewTab)}
 ${renderReferences(locale.sections.references)}
         </div>
       </div>

@@ -69,6 +69,17 @@ a {
   outline-offset: 3px;
 }
 
+.skip-link:focus-visible {
+  outline-color: var(--color-paper);
+  box-shadow: 0 0 0 3px var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Drop cap first-letter tuning for the lead paragraph */
 .first-letter\:font-serif::first-letter {
   font-family: var(--font-serif);

@@ -15,6 +15,7 @@ export const es: LocaleContent = {
     eyebrow: 'Pieza editorial · 2026',
     title: 'Carlo Acutis',
     subtitle: 'Una arquitectura de comunicación de lo sagrado, leída en clave 2026.',
+    leadLabel: 'Apertura',
     lead: 'A Carlo Acutis (1991–2006) suele presentárselo como un adolescente santo con un sitio web. Esta pieza elige un ángulo más estrecho y más sobrio: lee su breve obra como una arquitectura de comunicación — un ejercicio deliberado de diseño de información, distribución, legitimación y ritual. No es una startup, no es un álbum devocional, no es una app de milagros. Es un pequeño objeto editorial coherente, armado por un programador.',
     byline: 'Leído por Thiago Prazeres. Disponible en cinco idiomas.',
   },
@@ -236,6 +237,7 @@ export const es: LocaleContent = {
     otherLanguages: 'Leer en otro idioma',
     backToIndex: 'Volver al índice',
     onThisPage: 'En esta página',
+    opensInNewTab: '(se abre en una pestaña nueva)',
     sectionLabels: {
       problem: 'Problema',
       hypothesis: 'Hipótesis',
@@ -245,7 +247,7 @@ export const es: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Esta página pertenece a la entrega v0.8.0 — Edición de investigación. La arquitectura editorial de v0.4.0 se mantiene; la bibliografía ahora está agrupada por registro y la distinción entre anclajes documentales primarios y literatura secundaria es explícita.',
+    note: 'Esta página pertenece a la entrega v0.9.0 — Beta pública. La arquitectura editorial se mantiene; esta beta refuerza accesibilidad, referencias públicas y condiciones de lectura para revisión.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }

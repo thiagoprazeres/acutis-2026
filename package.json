@@ -1,6 +1,6 @@
 {
   "name": "acutis-2026",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A sober multilingual editorial piece about Carlo Acutis, read in a 2026 key.",
   "private": true,
   "type": "module",
