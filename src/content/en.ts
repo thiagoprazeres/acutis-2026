@@ -9,7 +9,7 @@ export const en: LocaleContent = {
   meta: {
     title: 'Carlo Acutis — a communication architecture of the sacred',
     description:
-      'A sober editorial reading of Carlo Acutis as programmer, web designer and digital mediator of the sacred.',
+      'A sober editorial reading of Carlo Acutis as programmer and web designer, and as a digital mediator of the sacred.',
   },
   masthead: {
     eyebrow: 'An editorial piece · 2026',
@@ -58,9 +58,9 @@ export const en: LocaleContent = {
           eyebrow: 'Synthesis',
           title: 'Carlo as a meeting point',
           paragraphs: [
-            'The synthesis is not that Carlo was either programmer or devotee. It is that the two registers met in one editorial act. He treated the database with the seriousness of a reliquary and treated the reliquary with the distribution logic of a network.',
+            'The synthesis is not a choice between Carlo the programmer and web designer and Carlo the devotee. It is that the registers met in one editorial act. He treated the database with the seriousness of a reliquary and treated the reliquary with the distribution logic of a network.',
             'By 2026, after canonization and after a new mobile continuation of the Eucharistic-miracles project, the shape of that act is clearer. Carlo became a node between archive and pilgrimage, screen and altar, youthful technical fluency and an older sacramental grammar.',
-            'The phrase “API for eternity” is deliberately metaphorical, but it points to the real achievement: Carlo did not invent the mysteries he cataloged. He made an interface through which another generation could encounter them without the past being flattened into content.',
+            'The architecture of public trust points to the real achievement: Carlo did not invent the mysteries he cataloged. He made an interface through which another generation could encounter them without the past being flattened into content.',
           ],
         },
       ],
@@ -71,7 +71,7 @@ export const en: LocaleContent = {
       paragraphs: [
         'The dominant registers on Carlo Acutis are two: the hagiographic — a digital saint, a young witness of faith — and the devotional — a patron of the internet, a prayer in motion. Both are legitimate. Neither is enough. The hagiographic register absorbs the object into the life; the devotional absorbs the life into the cult.',
         'Between the two, something concrete is lost: the work itself. The online exhibition of Eucharistic miracles — built, translated, distributed and accredited through ecclesial networks — is, before anything else, a communication piece. It has a structure. It has a method. It has, in the language of software, an architecture.',
-        'This piece asks what is in the register that has been skipped. It reads Acutis as a programmer, a web designer and a digital mediator of the sacred, and it treats the online exhibition as a small museum: not a cloud of miracles, but a system for circulating them.',
+        'This piece asks what is in the register that has been skipped. It reads Acutis as a programmer and web designer, and as a digital mediator of the sacred, treating the online exhibition as a small museum: not a cloud of miracles, but a system for circulating them.',
       ],
     },
     hypothesis: {

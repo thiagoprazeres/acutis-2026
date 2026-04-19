@@ -9,7 +9,7 @@ export const it: LocaleContent = {
   meta: {
     title: 'Carlo Acutis — un’architettura di comunicazione del sacro',
     description:
-      'Una lettura editoriale sobria di Carlo Acutis come programmatore, web designer e mediatore digitale del sacro.',
+      'Una lettura editoriale sobria di Carlo Acutis come programmatore e web designer, e come mediatore digitale del sacro.',
   },
   masthead: {
     eyebrow: 'Un pezzo editoriale · 2026',
@@ -58,9 +58,9 @@ export const it: LocaleContent = {
           eyebrow: 'Sintesi',
           title: 'Carlo come punto d’incontro',
           paragraphs: [
-            'La sintesi non è che Carlo fosse programmatore oppure devoto. È che i due registri si incontrarono in un unico atto editoriale. Trattò il database con la serietà di un reliquiario e trattò il reliquiario con la logica distributiva di una rete.',
+            'La sintesi non è scegliere tra Carlo programmatore e web designer e Carlo devoto. È che i registri si incontrarono in un unico atto editoriale. Trattò il database con la serietà di un reliquiario e trattò il reliquiario con la logica distributiva di una rete.',
             'Nel 2026, dopo la canonizzazione e dopo una nuova continuazione mobile del progetto sui miracoli eucaristici, la forma di quel gesto è più chiara. Carlo divenne un nodo tra archivio e pellegrinaggio, schermo e altare, padronanza tecnica giovanile e una grammatica sacramentale più antica.',
-            'La formula “API per l’eternità” è deliberatamente metaforica, ma indica il risultato reale: Carlo non inventò i misteri che catalogò. Creò un’interfaccia attraverso cui un’altra generazione poteva incontrarli senza che il passato fosse appiattito in contenuto.',
+            'L’architettura della fiducia pubblica indica il risultato reale: Carlo non inventò i misteri che catalogò. Creò un’interfaccia attraverso cui un’altra generazione poteva incontrarli senza che il passato fosse appiattito in contenuto.',
           ],
         },
       ],
@@ -71,7 +71,7 @@ export const it: LocaleContent = {
       paragraphs: [
         'I registri dominanti su Carlo Acutis sono due: l’agiografico — un santo digitale, un giovane testimone della fede — e il devozionale — un patrono di internet, una preghiera in movimento. Entrambi sono legittimi. Nessuno dei due basta. Il registro agiografico assorbe l’opera nella vita; quello devozionale assorbe la vita nel culto.',
         'Fra i due si perde qualcosa di concreto: l’opera stessa. La mostra online dei miracoli eucaristici — costruita, tradotta, distribuita e accreditata attraverso reti ecclesiali — è, prima di ogni altra cosa, un pezzo di comunicazione. Ha una struttura. Ha un metodo. Ha, nel linguaggio del software, un’architettura.',
-        'Questo pezzo interroga il registro saltato. Legge Acutis come programmatore, web designer e mediatore digitale del sacro, e tratta la mostra online come un piccolo museo: non una nuvola di miracoli, ma un sistema per farli circolare.',
+        'Questo pezzo interroga il registro saltato. Legge Acutis come programmatore e web designer, e come mediatore digitale del sacro, trattando la mostra online come un piccolo museo: non una nuvola di miracoli, ma un sistema per farli circolare.',
       ],
     },
     hypothesis: {

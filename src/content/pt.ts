@@ -9,14 +9,14 @@ export const pt: LocaleContent = {
   meta: {
     title: 'Carlo Acutis — uma arquitetura de comunicação do sagrado',
     description:
-      'Uma leitura editorial sóbria de Carlo Acutis como programador, web designer e mediador digital do sagrado.',
+      'Uma leitura editorial sóbria de Carlo Acutis como programador e webdesigner, e como mediador digital do sagrado.',
   },
   masthead: {
     eyebrow: 'Peça editorial · 2026',
     title: 'Carlo Acutis',
     subtitle: 'Uma arquitetura de comunicação do sagrado, lida em chave 2026.',
     leadLabel: 'Abertura',
-    lead: 'Carlo Acutis (1991–2006) costuma ser apresentado como um adolescente santo que mantinha um site. Esta peça adota um ângulo mais estreito e mais sóbrio: lê sua obra breve como uma arquitetura de comunicação — um exercício deliberado de design de informação, distribuição, legitimação e ritual. Não é uma startup, não é um álbum devocional, não é um aplicativo de milagres. É um pequeno objeto editorial coerente, montado por um programador.',
+    lead: 'Carlo Acutis foi programador e webdesigner, e usou código, imagem e forma para tornar visíveis os milagres eucarísticos aprovados pela Igreja. Aos 14 anos, já havia catalogado cerca de 136 casos e desenhado uma exposição internacional que transformava arquivos dispersos em experiência pública. Hohpe ajuda a nomear a integração: registros separados passam a circular por um canal comum. Peirce ajuda a nomear o sentido: fotografia, vestígio e símbolo conduzem o leitor a interpretar, não apenas a olhar. Carlo permanece no centro: em 2026, sua obra aparece como uma arquitetura de confiança pública, onde técnica e semiose religiosa se encontram.',
     byline: 'Leitura de Thiago Prazeres. Disponível em cinco idiomas.',
   },
   sections: {
@@ -24,43 +24,66 @@ export const pt: LocaleContent = {
       eyebrow: 'Narrativa · v2',
       title: 'O Arquiteto do Invisível: a jornada de Carlo Acutis',
       intro: [
-        'Carlo Acutis entra nesta história não como um prodígio chamado a resolver um problema tecnológico da Igreja, mas como um adolescente que percebeu que uma memória devocional dispersa podia se tornar legível se alguém lhe desse estrutura.',
-        'De Londres em 1991 a Milão, da missa diária à web inicial, a pergunta se torna prática: como um milagre guardado em um arquivo paroquial, em um testemunho local ou em um relatório científico pode viajar sem perder seu sinal?',
+        'Carlo Acutis não entrou na internet para escapar do mundo. Entrou para dar forma ao que permanecia invisível: uma memória eucarística espalhada por arquivos, santuários, testemunhos, fotografias e aprovações eclesiais.',
+        'Nascido em Londres em 1991 e criado em Milão, Carlo era profundamente ligado à Eucaristia, mas também era programador e webdesigner. A força da sua obra está nessa unidade: ele não alternou entre fé e técnica; fez da técnica um modo de organizar a fé para que outra geração pudesse encontrá-la.',
       ],
       chapters: [
         {
           eyebrow: '1991–2006',
-          title: 'Antes do catálogo',
+          title: 'O início de uma arquitetura',
           paragraphs: [
-            'Carlo nasceu em Londres em 3 de maio de 1991 e voltou a Milão com os pais poucos meses depois. O registro público insiste na textura comum de sua vida: escola, futebol, videogames, programas de computador, serviço paroquial, familiaridade com as ferramentas de sua geração.',
-            'O mesmo registro mostra também um centro de gravidade incomum. Desde a Primeira Comunhão, a Eucaristia passou a organizar seu dia. O site e a exposição não surgiram como passatempo separado; cresceram de uma vida jovem já organizada pela pergunta da presença.',
+            'O registro público preserva a textura comum da vida de Carlo: escola, futebol, videogames, programas de computador, serviço paroquial, familiaridade com as ferramentas de sua geração. Essa normalidade importa porque impede que sua obra seja lida como um artefato fora do tempo. Carlo trabalhou com a web que tinha diante de si.',
+            'O centro de gravidade, porém, era incomum. Desde a Primeira Comunhão, a Eucaristia passou a ordenar seu dia. O site e a exposição sobre milagres eucarísticos não nasceram como passatempo paralelo; cresceram de uma vida jovem já organizada pela pergunta da presença real.',
+            'O gesto decisivo foi perceber que uma herança invisível podia se tornar legível. Milagres reconhecidos pela Igreja existiam em livros, arquivos locais, tradições paroquiais e materiais devocionais. O problema não era a ausência de conteúdo; era a dispersão do conteúdo.',
+          ],
+        },
+        {
+          eyebrow: 'Catálogo',
+          title: 'Tornar o invisível visível',
+          paragraphs: [
+            'Aos 11 anos, Carlo começou a pesquisar milagres eucarísticos documentados: relatos em que pão e vinho consagrados aparecem ligados a sinais materiais de carne e sangue. O ponto crucial é que ele buscava casos investigados e aprovados pela Igreja. A credibilidade fazia parte da arquitetura desde o início.',
+            'Ao longo de cerca de três anos, Carlo reuniu informações sobre aproximadamente 136 milagres. Usou HTML, programação, design gráfico e organização editorial para converter esse material em apresentações digitais: histórias, fotografias, datas, lugares, documentos e aprovações eclesiais.',
+            'Ele não apenas copiou textos para uma página. Desenhou um caminho. Cada caso precisava ser encontrado, reconhecido e comparado sem perder sua singularidade local. O catálogo funcionava como mapa, arquivo e exposição ao mesmo tempo.',
+            'Quando a exposição “Milagres Eucarísticos no Mundo” ganhou forma, o resultado já era maior que um site pessoal. Carlo havia criado um objeto público: painéis, páginas, traduções e arquivos que podiam circular por paróquias, escolas, universidades e comunidades em diferentes países.',
           ],
         },
         {
           eyebrow: 'Integração de sistemas',
-          title: 'O broker da fé',
+          title: 'Da sala de máquinas à experiência pública',
           paragraphs: [
-            'No começo dos anos 2000, as histórias que Carlo queria fazer circular não estavam ausentes. Estavam distribuídas em sistemas diferentes: arquivos paroquiais, memória local, imagens digitalizadas, aprovações eclesiais, relatórios científicos, línguas e geografias. Em termos de software, comportavam-se como silos de dados.',
-            'Lida com as Enterprise Integration Patterns de Gregor Hohpe ao fundo, a obra de Carlo se torna um Message Bus metafórico. O site e a exposição imprimível deram aos registros separados uma interface comum. Não apagaram as histórias locais; permitiram que elas viajassem por um canal compartilhado.',
-            'O movimento mais profundo foi a tradução. Um milagre medieval ou moderno não pode simplesmente ser copiado para a web sem mudança de protocolo. Carlo agiu como um Message Translator: datas, lugares, fotografias, mapas, legendas e resumos converteram devoção analógica em itinerário digital sem fingir que o bit esgotava o mistério.',
+            'Hohpe entra aqui como lente, não como protagonista. Sua linguagem ajuda a ver a qualidade técnica do gesto de Carlo: relatos dispersos se comportavam como sistemas isolados, cada um com seu vocabulário, sua prova, sua geografia e seu modo de circulação.',
+            'Carlo construiu, em escala modesta e precisa, algo próximo de um barramento de mensagens para a fé. O site e a exposição imprimível não apagavam as histórias locais; ofereciam uma interface comum para que elas pudessem viajar. O arquivo deixava a sala de máquinas e chegava à experiência pública.',
+            'A tradução foi tão importante quanto a coleta. Um milagre medieval, uma fotografia moderna, um relatório médico e uma legenda catequética não têm o mesmo protocolo. Carlo aproximou esses materiais sem fingir que eram idênticos. Datas, lugares, imagens, resumos e aprovações se tornaram uma gramática compartilhada.',
+            'Essa é a arquitetura de confiança pública no ponto mais concreto: não uma metáfora grandiosa, mas um modo disciplinado de fazer registros confiáveis circularem. Carlo programou e desenhou para que o visitante não recebesse ruído, mas uma forma legível de encontro.',
           ],
         },
         {
           eyebrow: 'Semiose',
-          title: 'O decifrador do sinal',
+          title: 'Ícone, índice e símbolo',
           paragraphs: [
-            'Para Carlo, a Eucaristia não era um emblema vago. Era um sinal carregado de presença. Peirce ajuda a nomear a estrutura: uma forma significante, um objeto para o qual o sinal aponta e um interpretante produzido na pessoa que aprende a ler essa relação.',
-            'O catálogo intensificou esse processo. Uma fotografia, um mapa ou um relatório médico não substitui a fé; dá mais matéria ao interpretante. O milagre se torna não só objeto de devoção, mas também objeto de informação, capaz de ser seguido, comparado e revisitado.',
-            'Nesse sentido, o clique não era trivial. Abrir um registro sobre Lanciano ou Buenos Aires iniciava uma cadeia de interpretação: lugar, matéria, testemunho, instituição, leitor. A tecnologia se tornava ponte para a semiose, não substituto do sagrado.',
+            'Peirce também entra como lente, não como substituto de Carlo. Sua semiótica ajuda a nomear o que Carlo desenhou intuitivamente: um sistema de sinais em que imagem, vestígio e linguagem conduzem o visitante a interpretar o que vê.',
+            'Em um único registro de milagre, a fotografia funciona como ícone, porque se parece com a evidência material apresentada. A data, o lugar, o testemunho e o relatório funcionam como índices, porque apontam para um acontecimento situado. A legenda, a linguagem teológica e o reconhecimento eclesial funcionam como símbolos, porque dependem de uma tradição compartilhada para serem lidos.',
+            'Carlo organizou esses níveis sem transformar o mistério em dado bruto. A imagem não substitui a fé; dá forma ao olhar. O relatório não substitui a presença; oferece um vestígio investigável. A palavra “Eucaristia” não fecha o sentido; abre uma gramática sacramental para o leitor.',
+            'Por isso, o clique não é trivial. Abrir um registro sobre Lanciano, Buenos Aires ou outro caso inicia uma cadeia de interpretação: matéria, lugar, testemunho, instituição, leitor. A tecnologia se torna ponte para a semiose, não substituto do sagrado.',
+          ],
+        },
+        {
+          eyebrow: '2026',
+          title: 'A continuidade do itinerário',
+          paragraphs: [
+            'Em 2026, a forma do gesto de Carlo aparece com mais nitidez. Depois da canonização e da continuação móvel do projeto dos milagres eucarísticos, sua obra já não pode ser reduzida a devoção online de começo de século. O que permanece é uma maneira de fazer a tradição circular com clareza.',
+            'A nova camada móvel não troca Carlo por uma atualização técnica. Ela confirma a direção do trabalho original: tornar acessíveis, em outro suporte, os relatos documentados que ele reuniu. O canal muda; a arquitetura permanece reconhecível.',
+            'Essa continuidade é importante porque o ambiente digital de 2026 é mais ruidoso que a web de Carlo. Em meio a mídia viral, automação e excesso de imagens, sua resposta continua construtiva: organizar, verificar, narrar, dar forma. A confiança pública nasce dessa combinação entre sistema robusto e signo bem cuidado.',
           ],
         },
         {
           eyebrow: 'Síntese',
           title: 'Carlo como ponto de encontro',
           paragraphs: [
-            'A síntese não é que Carlo tenha sido programador ou devoto. É que os dois registros se encontraram em um único ato editorial. Ele tratou a base de dados com a seriedade de um relicário e tratou o relicário com a lógica distributiva de uma rede.',
-            'Em 2026, depois da canonização e depois de uma nova continuação móvel do projeto dos milagres eucarísticos, a forma desse gesto está mais clara. Carlo tornou-se um nó entre arquivo e peregrinação, tela e altar, fluência técnica juvenil e uma gramática sacramental mais antiga.',
-            'A expressão “API para a eternidade” é deliberadamente metafórica, mas aponta para a realização real: Carlo não inventou os mistérios que catalogou. Ele criou uma interface pela qual outra geração poderia encontrá-los sem que o passado fosse achatado em conteúdo.',
+            'A síntese não é opor o Carlo programador e webdesigner ao Carlo devoto. A síntese é perceber que os registros se encontraram em um único ato editorial. Ele tratou o banco de dados com a seriedade de um relicário e tratou o relicário com a lógica distributiva de uma rede.',
+            'Carlo não inventou os mistérios que catalogou. Também não se colocou acima deles como intérprete final. Fez algo mais preciso: construiu uma interface pela qual outra geração poderia encontrar esses sinais sem que o passado fosse achatado em conteúdo.',
+            'Hohpe ajuda a ver a integração. Peirce ajuda a ver a produção de sentido. Mas a obra é de Carlo: o jovem que uniu programação, webdesign, arquivo e Eucaristia em uma arquitetura de confiança pública.',
+            'Por isso, o “Arquiteto do Invisível” não é uma metáfora de fuga. É o nome de um trabalho concreto: tornar visível o que estava disperso, sem retirar do invisível sua profundidade. Carlo catalogou milagres; mais profundamente, desenhou sua circulação e sua legibilidade.',
           ],
         },
       ],
@@ -71,7 +94,7 @@ export const pt: LocaleContent = {
       paragraphs: [
         'Os registros dominantes sobre Carlo Acutis são dois: o hagiográfico — um santo digital, um jovem testemunho da fé — e o devocional — um padroeiro da internet, uma oração em movimento. Ambos são legítimos. Nenhum é suficiente. O registro hagiográfico absorve a obra na vida; o devocional absorve a vida no culto.',
         'Entre os dois, perde-se algo concreto: a obra em si. A exposição online de milagres eucarísticos — construída, traduzida, distribuída e acreditada por redes eclesiais — é, antes de qualquer coisa, uma peça de comunicação. Tem estrutura. Tem método. Tem, na linguagem do software, uma arquitetura.',
-        'Esta peça pergunta pelo registro que foi saltado. Lê Acutis como programador, web designer e mediador digital do sagrado, e trata a exposição online como um pequeno museu: não uma nuvem de milagres, mas um sistema para fazê-los circular.',
+        'Esta peça pergunta pelo registro que foi saltado. Lê Acutis como programador e webdesigner, e como mediador digital do sagrado, tratando a exposição online como um pequeno museu: não uma nuvem de milagres, mas um sistema para fazê-los circular.',
       ],
     },
     hypothesis: {
