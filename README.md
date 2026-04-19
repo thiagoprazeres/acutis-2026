@@ -56,7 +56,9 @@ BASE_PATH=/ CANONICAL_ORIGIN=https://example.org npm run build
 
 ## Releases
 
-The site is released in numbered editorial stages. Current release: **v0.9.0 — Public beta**. This release keeps the editorial and multilingual architecture in place while tightening accessibility, reading quality, outbound-link reliability, and public-reference hygiene. Later releases extend the research surface without changing the architecture.
+The site is released in numbered editorial stages. Current release: **v1.0.0 — Public product**. This is the first stable public version of the piece: the editorial architecture, multilingual static structure, external-reference policy, accessibility pass, and GitHub Pages delivery path are considered release-ready.
+
+Post-1.0 work is intentionally outside this release. Later changes may extend the research surface, add new editorial registers, or revisit presentation details, but those are backlog items, not blockers for the stable public product.
 
 ## Media policy
 

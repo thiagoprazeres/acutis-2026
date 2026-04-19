@@ -247,7 +247,7 @@ export const pt: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Esta página pertence ao release v0.9.0 — Beta público. A arquitetura editorial permanece; este beta reforça acessibilidade, referências públicas e condições de leitura para revisão.',
+    note: 'Esta página pertence ao release v1.0.0 — Produto público. A arquitetura editorial está estável, a estrutura multilíngue é intencional e o trabalho posterior pertence ao pós-1.0.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }
