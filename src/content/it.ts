@@ -348,7 +348,7 @@ export const it: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Questa pagina appartiene al rilascio v2.0.0 — Edizione narrativa. Il prodotto pubblico stabile include ora uno strato di storytelling e un registro più rigoroso degli asset remoti.',
+    note: 'Questa pagina appartiene al rilascio v2.1.0 — Ancora di continuità 2026. Lo strato narrativo ora approda alla continuazione mobile, nel febbraio 2026, del lavoro di Carlo sui miracoli eucaristici.',
     license: 'Testo: CC BY 4.0 · Codice: MIT.',
   },
 }

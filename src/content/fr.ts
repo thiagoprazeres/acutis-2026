@@ -348,7 +348,7 @@ export const fr: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Cette page appartient à la version v2.0.0 — Édition narrative. Le produit public stable inclut désormais une couche de storytelling et un registre plus strict des actifs distants.',
+    note: 'Cette page appartient à la version v2.1.0 — Ancrage de continuité 2026. La couche narrative rejoint désormais la continuation mobile de février 2026 du travail de Carlo sur les miracles eucharistiques.',
     license: 'Texte : CC BY 4.0 · Code : MIT.',
   },
 }

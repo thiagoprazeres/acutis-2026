@@ -348,7 +348,7 @@ export const es: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Esta página pertenece a la entrega v2.0.0 — Edición narrativa. El producto público estable incluye ahora una capa de storytelling y un registro más estricto de activos remotos.',
+    note: 'Esta página pertenece a la entrega v2.1.0 — Ancla de continuidad 2026. La capa narrativa ahora desemboca en la continuación móvil de febrero de 2026 del trabajo de Carlo sobre los milagros eucarísticos.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }

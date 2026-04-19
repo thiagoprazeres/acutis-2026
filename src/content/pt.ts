@@ -16,7 +16,7 @@ export const pt: LocaleContent = {
     title: 'Carlo Acutis',
     subtitle: 'Uma arquitetura de comunicação do sagrado, lida em chave 2026.',
     leadLabel: 'Abertura',
-    lead: 'Carlo Acutis foi programador e webdesigner, e usou código, imagem e forma para tornar visíveis os milagres eucarísticos aprovados pela Igreja. Aos 14 anos, já havia catalogado cerca de 136 casos e desenhado uma exposição internacional que transformava arquivos dispersos em experiência pública. Hohpe ajuda a nomear a integração: registros separados passam a circular por um canal comum. Peirce ajuda a nomear o sentido: fotografia, vestígio e símbolo conduzem o leitor a interpretar, não apenas a olhar. Carlo permanece no centro: em 2026, sua obra aparece como uma arquitetura de confiança pública, onde técnica e semiose religiosa se encontram.',
+    lead: 'Carlo Acutis foi mais que um adolescente devoto com talento técnico. Foi programador e webdesigner, alguém que entendeu que a fé também precisa de estrutura, linguagem e circulação. Ao catalogar milagres eucarísticos aprovados pela Igreja e transformá-los em exposição, site e percurso público, deu forma digital ao que permanecia disperso em arquivos, memória local e devoção. Em 2026, essa missão continua viva: o catálogo virou exposição, a exposição virou site, e o site agora continua em forma móvel. Carlo importa agora porque mostrou que a tecnologia pode organizar confiança, não apenas informação.',
     byline: 'Leitura de Thiago Prazeres. Disponível em cinco idiomas.',
   },
   sections: {
@@ -71,9 +71,10 @@ export const pt: LocaleContent = {
           eyebrow: '2026',
           title: 'A continuidade do itinerário',
           paragraphs: [
-            'Em 2026, a forma do gesto de Carlo aparece com mais nitidez. Depois da canonização e da continuação móvel do projeto dos milagres eucarísticos, sua obra já não pode ser reduzida a devoção online de começo de século. O que permanece é uma maneira de fazer a tradição circular com clareza.',
-            'A nova camada móvel não troca Carlo por uma atualização técnica. Ela confirma a direção do trabalho original: tornar acessíveis, em outro suporte, os relatos documentados que ele reuniu. O canal muda; a arquitetura permanece reconhecível.',
-            'Essa continuidade é importante porque o ambiente digital de 2026 é mais ruidoso que a web de Carlo. Em meio a mídia viral, automação e excesso de imagens, sua resposta continua construtiva: organizar, verificar, narrar, dar forma. A confiança pública nasce dessa combinação entre sistema robusto e signo bem cuidado.',
+            'Em fevereiro de 2026, a Vatican News registrou o lançamento de um novo aplicativo dedicado aos milagres eucarísticos catalogados por Carlo Acutis. O dado importa porque não desloca Carlo para uma notícia recente; confirma a continuidade da sua missão. A tecnologia do seu tempo organizou e promoveu milagres aprovados pela Igreja, e a linguagem móvel de agora leva adiante o mesmo testemunho.',
+            'Isso muda o peso do argumento. Carlo não é relevante apenas como pioneiro do passado. Ele permanece ativo como arquitetura presente. O que começou como catálogo virou exposição; o que virou exposição virou site; o que virou site agora continua como aplicativo.',
+            'A forma muda. A missão permanece. O aplicativo não substitui Carlo, nem transforma sua obra em produto de ocasião. Ele reforça que a arquitetura iniciada por Carlo continua viva: organização, visibilidade, circulação, interpretação e confiança pública.',
+            'Essa continuidade é decisiva porque o ambiente digital de 2026 é mais ruidoso que a web de Carlo. Em meio a mídia viral, automação, conteúdo sintético e atenção fraturada, sua resposta continua construtiva: não ruído, mas curadoria; não aceleração isolada, mas estrutura; não espetáculo, mas confiança pública.',
           ],
         },
         {
@@ -155,7 +156,7 @@ export const pt: LocaleContent = {
       eyebrow: 'Ativos remotos',
       title: 'Links externos para a camada narrativa',
       intro:
-        'A camada narrativa v2 acrescenta um conjunto mais estrito de coordenadas externas: biografia e linha do tempo oficiais, página da exposição, rastro do app de 2026, catálogo de mídia e links teóricos usados na leitura Hohpe e Peirce. Eles permanecem externos por desenho.',
+        'A camada narrativa v2.1 mantém as coordenadas externas e torna mais explícito o ponto de chegada de fevereiro de 2026: biografia e linha do tempo oficiais, página da exposição, rastro do app dedicado aos milagres eucarísticos, catálogo de mídia e links teóricos usados na leitura Hohpe e Peirce. Eles permanecem externos por desenho.',
       accessedLabel: 'acessado em',
       policyLabel: 'Ver a política de mídia externa',
       policyUrl: POLICY_URL,
@@ -183,7 +184,7 @@ export const pt: LocaleContent = {
         },
         {
           ...externalAnchors.vaticanApp,
-          note: 'Rastro da Vatican News sobre a continuação móvel, em 2026, do projeto dos milagres eucarísticos, útil para o ponto de chegada “até 2026”.',
+          note: 'Rastro da Vatican News sobre o aplicativo lançado em fevereiro de 2026, usado aqui como prova de continuidade: catálogo, exposição, site e forma móvel da mesma missão iniciada por Carlo.',
         },
         {
           ...externalAnchors.commons,
@@ -371,7 +372,7 @@ export const pt: LocaleContent = {
     },
   },
   colophon: {
-    note: 'Esta página pertence ao release v2.0.0 — Edição narrativa. O produto público estável agora inclui uma camada de storytelling e um registro mais estrito de ativos remotos.',
+    note: 'Esta página pertence ao release v2.1.0 — Âncora de continuidade 2026. A camada narrativa agora desemboca na continuação móvel, em fevereiro de 2026, da obra de Carlo sobre os milagres eucarísticos.',
     license: 'Texto: CC BY 4.0 · Código: MIT.',
   },
 }

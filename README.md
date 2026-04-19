@@ -56,7 +56,7 @@ BASE_PATH=/ CANONICAL_ORIGIN=https://example.org npm run build
 
 ## Releases
 
-The site is released in numbered editorial stages. Current release: **v2.0.0 — Narrative edition**. This release keeps the stable public product intact and adds "The Architect of the Invisible", a storytelling path through Carlo Acutis, Eucharistic-miracle cataloging, systems integration, Peircean semiosis and Carlo as a meeting point between archive, interface and sacrament.
+The site is released in numbered editorial stages. Current release: **v2.1.0 — 2026 continuity anchor**. This release keeps the v2 storytelling layer intact and sharpens its present-day landing point: the February 2026 mobile continuation of Carlo Acutis's Eucharistic-miracles work, read as continuity from catalog to exhibition to site to app.
 
 The v2 boundary is editorial, not infrastructural. It adds narrative and a stricter remote-asset register without changing the stack, adding dependencies, rehosting third-party media, or turning the project into a dynamic application.
 

@@ -15,8 +15,8 @@ export const home: HomeContent = {
     tagline: 'Programmer and web designer. Digital mediator of the sacred.',
   },
   manifesto: [
-    'Carlo Acutis was no ordinary teenager with a website. He was a programmer and web designer who used code, images and structure to make Church-approved Eucharistic miracles visible and credible. By age 14, he had catalogued roughly 136 cases and designed a global exhibition and site. Hohpe helps name the integration: scattered records became a shared channel between archive and public experience. Peirce helps name the meaning: image, evidence and symbol moved together until each miracle could be read, not just seen. Carlo remains at the center: in 2026, his work reads as an architecture of public trust where technical integration and religious sign-making meet.',
-    'The v2 edition follows that arc from Carlo’s beginning through the cataloging of Eucharistic miracles and toward the 2026 continuation of that digital itinerary. The story passes through systems integration, Peircean semiosis and Carlo as the meeting point between archive, interface and sacrament.',
+    'Carlo Acutis was more than a devout teenager with technical talent. He was a programmer and web designer who understood that faith also needs structure, language and circulation. By cataloguing Eucharistic miracles approved by the Church and turning them into exhibition, site and public journey, he gave digital form to what had long remained scattered across archives, local memory and devotion. In 2026, that mission is still alive: catalog became exhibition, exhibition became site, and site now continues in mobile form. Carlo matters now because he showed how technology can organize trust, not just information.',
+    'The v2.1 edition follows that arc from Carlo’s beginning through the cataloguing of Eucharistic miracles and toward the February 2026 mobile continuation of that digital itinerary. The story passes through systems integration, Peircean semiosis and Carlo as the meeting point between archive, interface and sacrament.',
     'The research layer behind the piece keeps primary documentary anchors explicit, remote media external, and the secondary literature grouped by register. Each language opens the same argument under the same structure, with a storytelling section and a remote-asset register added for v2.',
   ],
   selector: {
@@ -31,7 +31,7 @@ export const home: HomeContent = {
     ],
   },
   colophon: {
-    note: 'This release is v2.0.0 — Narrative edition. The stable public product now includes original storytelling and a stricter remote-asset register.',
+    note: 'This release is v2.1.0 — 2026 continuity anchor. The storytelling layer now lands in the February 2026 mobile continuation of Carlo’s Eucharistic-miracles work.',
     license: 'Text: CC BY 4.0 · Code: MIT.',
   },
 }

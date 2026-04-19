@@ -348,7 +348,7 @@ export const en: LocaleContent = {
     },
   },
   colophon: {
-    note: 'This page belongs to release v2.0.0 — Narrative edition. The stable public product now includes a storytelling layer and a stricter remote-asset register.',
+    note: 'This page belongs to release v2.1.0 — 2026 continuity anchor. The storytelling layer now lands in the February 2026 mobile continuation of Carlo’s Eucharistic-miracles work.',
     license: 'Text: CC BY 4.0 · Code: MIT.',
   },
 }
