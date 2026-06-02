@@ -1,6 +1,6 @@
 # Acutis, 2026
 
-[Read the published site](https://thiagoprazeres.github.io/acutis-2026/)
+[View site](https://thiagoprazeres.github.io/acutis-2026/)
 
 This repository publishes a static multilingual editorial project about Carlo Acutis as programmer, webdesigner, and digital mediator of sacred memory.
 

@@ -95,7 +95,7 @@ ${methodParagraphs}
         <div class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted md:text-right space-y-2">
           <p>${escapeHtml(home.colophon.license)}</p>
           <p>
-            <a class="hover:text-ink focus-visible:text-ink transition-colors" href="${escapeAttr(site.repositoryUrl)}">GitHub repository</a>
+            <a class="hover:text-ink focus-visible:text-ink transition-colors" href="${escapeAttr(site.repositoryUrl)}">View on GitHub</a>
           </p>
         </div>
       </div>
