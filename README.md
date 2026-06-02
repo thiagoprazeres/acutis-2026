@@ -1,5 +1,7 @@
 # Acutis, 2026
 
+[Read the published site](https://thiagoprazeres.github.io/acutis-2026/)
+
 This repository publishes a static multilingual editorial project about Carlo Acutis as programmer, webdesigner, and digital mediator of sacred memory.
 
 The site reads Carlo's work on the Eucharistic miracles catalog as an architecture of public trust: catalog -> exhibition -> site -> mobile app. The 2026 mobile continuation matters here because it shows that Carlo's original digital mission remains active, not because the app replaces him as the subject.

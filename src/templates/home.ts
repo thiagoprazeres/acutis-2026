@@ -92,7 +92,12 @@ ${methodParagraphs}
     <footer class="mx-auto w-full max-w-6xl px-6 md:px-10 py-10 md:py-14">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted max-w-md">${escapeHtml(home.colophon.note)}</p>
-        <p class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted">${escapeHtml(home.colophon.license)}</p>
+        <div class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted md:text-right space-y-2">
+          <p>${escapeHtml(home.colophon.license)}</p>
+          <p>
+            <a class="hover:text-ink focus-visible:text-ink transition-colors" href="${escapeAttr(site.repositoryUrl)}">GitHub repository</a>
+          </p>
+        </div>
       </div>
     </footer>`
 

@@ -12,6 +12,7 @@ export const site = {
   basePath: process.env.BASE_PATH ?? '/acutis-2026/',
   canonicalOrigin:
     process.env.CANONICAL_ORIGIN ?? 'https://thiagoprazeres.github.io',
+  repositoryUrl: 'https://github.com/thiagoprazeres/acutis-2026',
   defaultLocale: 'en',
   // Current editorial release marker surfaced in small UI chrome
   // (header mark on the index, footer mark on 404). Copy that is visible
